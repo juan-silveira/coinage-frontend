@@ -2276,6 +2276,13 @@ tbody.ob-heading {
   font-size: 10px;
 }
 
+.mr-15{
+  margin-left: -114px;
+  /* padding-right: 250px; */
+  /* transform: translateX(-250px); */
+  /* margin-right: 250px; */
+}
+
 .carousel_icon{
   margin-left: 70%;
   max-height: 50px;
