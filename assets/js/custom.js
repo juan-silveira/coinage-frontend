@@ -927,11 +927,13 @@
       $('header').attr('class', 'dark-bb');
       $('body').attr('id', 'dark');
       $('.navbar-brand img').attr('src', 'assets/img/logo-ca.png');
+      $('.theme-color').attr('class', 'theme-color text-light');
     } else {
       $('#changeThemeLight a i').attr('class', 'icon ion-md-sunny');
       $('header').attr('class', 'light-bb');
       $('body').attr('id', 'light');
       $('.navbar-brand img').attr('src', 'assets/img/logo-ca.png');
+      $('.theme-color').attr('class', 'theme-color text-dark');
     }
   });
 
@@ -950,3 +952,32 @@
     }
   });
 })(jQuery);
+
+const changeActive = ({target}) => {
+  // console.log(target.parentNode.childNodes[1, 3, 5, 7, 9])
+  target.parentNode.childNodes.forEach((element, i) => {
+    if(i % 2 != 0 && i != target.parentNode.childNodes.length)
+    element.classList.remove("active")
+  });
+  target.classList.add("active");
+}
+let visible = true;
+const balanceVisibility = () => {
+  const eye = document.getElementById("eye");
+  if(visible == true){
+    document.getElementById("balance-hidden").style.display = "block";
+    document.getElementById("balance").style.display = "none";
+    eye.classList.remove("ion-ios-eye");
+    eye.classList.add("ion-ios-eye-off");
+    visible = false;
+  } else {
+    document.getElementById("balance-hidden").style.display = "none";
+    document.getElementById("balance").style.display = "block";
+    eye.classList.remove("ion-ios-eye-off");
+    eye.classList.add("ion-ios-eye");
+    visible = true;
+  }
+}
+
+document.getElementById("sidebar-menu").addEventListener("click", changeActive);
+document.getElementById("visibility-button").addEventListener("click", balanceVisibility);
