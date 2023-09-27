@@ -2267,66 +2267,6 @@ tbody.ob-heading {
   color: #007bff;
 }
 
-.bg-header{
-  margin-left: 7px;
-  background-image: linear-gradient(to right, #e0edfb , white);
-}
-
-.fs-10{
-  font-size: 10px;
-}
-
-.mr-15{
-  margin-left: -114px;
-}
-
-.carousel_icon{
-  margin-left: 70%;
-  max-height: 50px;
-  max-width: 50px;
-}
-
-.service_icon {
-  font-size: 20px;
-}
-
-.line {
-  height: 500px;
-}
-
-.list-group-item{
-  border: none;
-  background-color: transparent;
-}
-
-.button {
-  margin: auto;
-}
-
-.hidden{
-  border-right: solid 1px #007bff;
-}
-
-#balance-crypto{
-  border-bottom: 1px dotted;
-}
-
-.symbol{
-  max-width: 30px;
-  margin-right: 10px;
-}
-
-#balance-hidden{
-  display: none;
-}
-
-#chartdiv {
-  width: 100%;
-  max-width: 100%;
-  height: 250px;
-  max-height: 100%;
-}
-
 @media only screen and (max-width: 1434px) {
   .market-pairs tbody {
     height: 760px;
@@ -2442,18 +2382,7 @@ tbody.ob-heading {
   }
 }
 
-@media only screen and (min-width: 769px) {
-
-  .md-hidden{
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 768px) {
-
-  .hidden{
-    display: none;
-  }
 
   footer.landing-footer {
     text-align: center;
