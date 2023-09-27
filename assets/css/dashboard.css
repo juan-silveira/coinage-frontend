@@ -47,8 +47,8 @@
 }
 
 .symbol {
-    max-width: 30px;
-    margin-right: 10px;
+    max-width: 20px;
+    margin-right: 3px;
 }
 
 #balance-hidden {
@@ -61,6 +61,18 @@
     height: 250px;
     max-height: 100%;
 }
+
+.dashboard .card {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  .dashboard-nav {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
+    border-radius: 5px;
+  }
 
 @media only screen and (min-width: 769px) {
 

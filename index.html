@@ -278,112 +278,13 @@
                 <h4 class="theme-color"><span class="font-weight-bold">***Saldo e variações diárias escondidos***</span>
                 </h4>
               </div>
-              <div class="col-12 mb-5">
-                <div class="row">
-                  <div class="col-12 d-flex justify-content-center">
-                    <ul class="nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon ion-ios-pie mr-1"></i>Portfólio</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon ion-ios-wallet mr-1"></i>Minha Carteira</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-12">
-                    <div class="mb-5" id="chartdiv"></div>
-                  </div>
-                  <div class="col-12">
-                    <table class="table" id="portfolio">
-                      <thead class="text-center">
-                        <tr>
-                          <th>Token</th>
-                          <th>Quantidade</th>
-                          <th>Valor em CBRL</th>
-                          <th>24h</th>
-                          <th>Compra</th>
-                          <th>Venda</th>
-                        </tr>
-                      </thead>
-                      <tbody class="text-center">
-                        <tr>
-                          <td>FTR</td>
-                          <td>501,9</td>
-                          <td>231,06</td>
-                          <td class="text-success">1,04%</td>
-                          <td><a href="#" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
-                          <td><a href="#" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>IMB</td>
-                          <td>301,9</td>
-                          <td>151,90</td>
-                          <td class="">0%</td>
-                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
-                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>LOC</td>
-                          <td>201,1</td>
-                          <td>55,06</td>
-                          <td class="text-success">4,04%</td>
-                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
-                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td>JUD</td>
-                          <td>50</td>
-                          <td>11,1</td>
-                          <td class="text-danger">-1,04%</td>
-                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
-                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 mb-3">
             <div class="row my-2">
-              <div class="col-12">
-                <h5 class="theme-color">Serviços Financeiros</h5>
-                <div class="row my-2 justify-content-center">
-                  <div class="col-6 col-lg-12 mb-2">
-                    <a href="" class="btn btn-sm btn-primary w-100">
-                      <span class="d-block">Boleto</span>
-                      <span class="d-block"><i class="icon ion-ios-barcode service_icon"></i></span>
-                      <span class="fs-10">Pagamento de Boletos</span>
-                    </a>
-                  </div>
-                  <div class="col-6 col-lg-12 mb-2">
-                    <a href="" class="btn btn-sm btn-primary w-100">
-                      <span class="d-block">Pix</span>
-                      <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
-                      <span class="fs-10">Depósitos e Saques</span>
-                    </a>
-                  </div>
-                  <div class="col-6 col-lg-12 mb-2">
-                    <a href="" class="btn btn-sm btn-primary w-100">
-                      <span class="d-block">Recarga</span>
-                      <span class="d-block"><i class="icon ion-ios-phone-portrait service_icon"></i></span>
-                      <span class="fs-10">Recarga telefônica</span>
-                    </a>
-                  </div>
-                  <div class="col-6 col-lg-12 mb-2">
-                    <a href="" class="btn btn-sm btn-primary w-100">
-                      <span class="d-block">Transferência</span>
-                      <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
-                      <span class="fs-10">Transferência de Moedas</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
               <div class="col">
                 <h5 class="theme-color">Recomendados para você</h5>
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-
                   <div class="carousel-inner bg-primary rounded">
                     <div class="carousel-item active">
                       <div class="row align-items-center">
@@ -457,6 +358,223 @@
               </div>
             </div>
           </div>
+
+          <div class="dashboard col-12 mb-3">
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <div class="nav nav-pills dashboard-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" id="dashboard-capital-tab" data-toggle="pill" href="#dashboard-capital"
+                    role="tab" aria-controls="dashboard-capital" aria-selected="true"><i
+                      class="icon ion-ios-stats mr-1"></i>Meu
+                    Capital</a>
+                  <a class="nav-link" id="dashboard-portfolio-tab" data-toggle="pill" href="#dashboard-portfolio"
+                    role="tab" aria-controls="dashboard-portfolio" aria-selected="false"><i
+                      class="icon ion-ios-pie mr-1"></i>Portfólio</a>
+                  <a class="nav-link" id="dashboard-wallet-tab" data-toggle="pill" href="#dashboard-wallet" role="tab"
+                    aria-controls="dashboard-wallet" aria-selected="false"><i class="icon ion-ios-wallet mr-1"></i>Minha
+                    Carteira</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="dashboard-capital" role="tabpanel"
+                aria-labelledby="dashboard-capital-tab">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <div class="dashboard-capital">
+                      <div class="markets-container">
+                        <div class="markets-content">
+                          <h2>BTC Index</h2>
+                          <p>7340.65</p>
+                          <span class="green"> + 0.45%</span>
+                        </div>
+                        <div class="markets-chart">
+                          <div id="marketsChartBtcLight"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="dashboard-portfolio" role="tabpanel"
+                aria-labelledby="dashboard-portfolio-tab">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <div class="dashboard-portfolio">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="mb-5" id="chartdiv"></div>
+                        </div>
+                        <div class="col-12">
+                          <table class="table" id="portfolio">
+                            <thead class="text-center">
+                              <tr>
+                                <th>Token</th>
+                                <th>Quantidade</th>
+                                <th>Valor em CBRL</th>
+                                <th>24h</th>
+                                <th>Compra</th>
+                                <th>Venda</th>
+                              </tr>
+                            </thead>
+                            <tbody class="text-center">
+                              <tr>
+                                <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/ftr.png"
+                                  alt="symbol"><span class="theme-color">FTR</span></a></td>
+                                <td>501,9</td>
+                                <td>231,06</td>
+                                <td class="text-success">1,04%</td>
+                                <td><a href="#" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cart text-success"></i></a></td>
+                                <td><a href="#" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cash text-danger"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/18.png"
+                                  alt="symbol"><span class="theme-color">IMB</span></a></td>
+                                <td>301,9</td>
+                                <td>151,90</td>
+                                <td class="">0%</td>
+                                <td><a href="" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cart text-success"></i></a></td>
+                                <td><a href="" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cash text-danger"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/1.png"
+                                  alt="symbol"><span class="theme-color">LOC</span></a></td>
+                                <td>201,1</td>
+                                <td>55,06</td>
+                                <td class="text-success">4,04%</td>
+                                <td><a href="" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cart text-success"></i></a></td>
+                                <td><a href="" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cash text-danger"></i></a></td>
+                              </tr>
+                              <tr>
+                                <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/4.png"
+                                  alt="symbol"><span class="theme-color">JUD</span></a></td>
+                                <td>50</td>
+                                <td>11,1</td>
+                                <td class="text-danger">-1,04%</td>
+                                <td><a href="" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cart text-success"></i></a></td>
+                                <td><a href="" class="btn btn-sm bg-light"><i
+                                      class="icon ion-ios-cash text-danger"></i></a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="dashboard-wallet" role="tabpanel" aria-labelledby="dashboard-wallet-tab">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <div class="dashboard-wallet">
+                      <table class="table" id="wallet">
+                        <thead class="text-center">
+                          <tr>
+                            <th>Token</th>
+                            <th>Quantidade</th>
+                            <th>Valor em CBRL</th>
+                            <th>24h</th>
+                            <th>Compra</th>
+                            <th>Venda</th>
+                          </tr>
+                        </thead>
+                        <tbody class="text-center">
+                          <tr>
+                            <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/ftr.png"
+                              alt="symbol"><span class="theme-color">FTR</span></a></td>
+                            <td>501,9</td>
+                            <td>231,06</td>
+                            <td class="text-success">1,04%</td>
+                            <td><a href="#" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cart text-success"></i></a></td>
+                            <td><a href="#" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cash text-danger"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/18.png"
+                              alt="symbol"><span class="theme-color">IMB</span></a></td>
+                            <td>301,9</td>
+                            <td>151,90</td>
+                            <td class="">0%</td>
+                            <td><a href="" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cart text-success"></i></a></td>
+                            <td><a href="" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cash text-danger"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/1.png"
+                              alt="symbol"><span class="theme-color">LOC</span></a></td>
+                            <td>201,1</td>
+                            <td>55,06</td>
+                            <td class="text-success">4,04%</td>
+                            <td><a href="" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cart text-success"></i></a></td>
+                            <td><a href="" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cash text-danger"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/4.png"
+                              alt="symbol"><span class="theme-color">JUD</span></a></td>
+                            <td>50</td>
+                            <td>11,1</td>
+                            <td class="text-danger">-1,04%</td>
+                            <td><a href="" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cart text-success"></i></a></td>
+                            <td><a href="" class="btn btn-sm bg-light"><i
+                                  class="icon ion-ios-cash text-danger"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 mb-3">Algum conteúdo entra</div>
+          <div class="col-lg-4 mb-3">
+            <h5 class="theme-color">Serviços Financeiros</h5>
+            <div class="row my-2">
+              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+                <a href="" class="btn btn-sm btn-primary w-100">
+                  <span class="d-block">Boleto</span>
+                  <span class="d-block"><i class="icon ion-ios-barcode service_icon"></i></span>
+                </a>
+              </div>
+              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+                <a href="" class="btn btn-sm btn-primary w-100">
+                  <span class="d-block">Pix</span>
+                  <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
+                </a>
+              </div>
+              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+                <a href="" class="btn btn-sm btn-primary w-100">
+                  <span class="d-block">Recarga</span>
+                  <span class="d-block"><i class="icon ion-ios-phone-portrait service_icon"></i></span>
+                </a>
+              </div>
+              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+                <a href="" class="btn btn-sm btn-primary w-100">
+                  <span class="d-block">Transferência</span>
+                  <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -467,6 +585,7 @@
     <script src="assets/js/amcharts-core.min.js"></script>
     <script src="assets/js/amcharts.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/dashboard.js"></script>
 </body>
 
 </html>
