@@ -220,7 +220,7 @@
           <li class="ml-4">Menu 5</li>
         </ul>
       </div>
-      <div class="col-md-3 hidden">
+      <div class="col-md-2 hidden">
         <div class="list-group" id="sidebar-menu">
           <a href="#" class="list-group-item list-group-item-action">Menu 1</a>
           <a href="#" class="list-group-item list-group-item-action">Menu 2</a>
@@ -229,7 +229,7 @@
           <a href="#" class="list-group-item list-group-item-action">Menu 5</a>
         </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-10">
         <div class="row">
           <div class="col-12 bg-header">
             <h1 class="mt-3">Home</h1>
@@ -239,18 +239,18 @@
               <div class="col-12 d-flex my-2">
                 <h5 class="theme-color">Saldo Estimado <button class="btn btn-sm btn-light" id="visibility-button"><i
                       class="icon ion-ios-eye" id="eye"></button></i></h5>
-                <a href="" class="btn btn-warning fs-10 button">Depósito</a>
-                <a href="" class="btn btn-primary fs-10 button">Saque</a>
-                <a href="" class="btn btn-primary fs-10 button">Comprar Moedas</a>
+                <a href="" class="btn btn-sm btn-warning fs-10 button">Depósito</a>
+                <a href="" class="btn btn-sm btn-primary fs-10 button">Saque</a>
+                <a href="" class="btn btn-sm btn-primary fs-10 button">Comprar Moedas</a>
               </div>
               <div class="col-12 mb-3" id="balance">
                 <div class="d-flex">
                   <span class="theme-color" id="balance-crypto">
-                    <span class="h5 font-weight-bold" id="balance-number">0.00000006</span>
-                    <span class="ml-1 h5 font-weight-bold" id="balance-symbol">BTC</span>
+                    <span class="h5 font-weight-bold" id="balance-number">1054.9000</span>
+                    <span class="ml-1 h5 font-weight-bold" id="balance-symbol">CBRL</span>
                   </span>
                   <div class="dropdown">
-                    <button class="btn btn-sm btn-primary button" type="button" data-toggle="dropdown"
+                    <button class="btn btn-sm btn-primary ml-2" type="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false" id="symbol-down">
                       <i class="icon ion-ios-arrow-down"></i>
                     </button>
@@ -266,8 +266,8 @@
                   <div class="d-flex ml-3">
                     <span class="theme-color">
                       <span class="h5">≈</span>
-                      <span class="h5 ml-1" id="balance-symbol">$</span>
-                      <span class="h5" id="balance-number">0.00157037</span>
+                      <span class="h5 ml-1" id="balance-symbol">CBRL</span>
+                      <span class="h5" id="balance-number">1054.9000</span>
                     </span>
                   </div>
                 </div>
@@ -279,99 +279,66 @@
               </div>
               <div class="col-12 mb-5">
                 <div class="row">
-                  <div class="col-12 d-flex justify-content-between">
-                    <div class="btn-group">
-                      <a href="#" class="btn btn-outline-primary active" aria-current="page">7 dias</a>
-                      <a href="#" class="btn btn-outline-primary">30 dias</a>
-                    </div>
+                  <div class="col-12 d-flex justify-content-center">
                     <ul class="nav">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#" data-toggle="modal"
-                          data-target="#exampleModal"><i class="icon ion-ios-pie mr-1"></i>Portfólio</a>
+                        <a class="nav-link" href="#"><i class="icon ion-ios-pie mr-1"></i>Portfólio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon ion-ios-wallet mr-1"></i>Minha Carteira</a>
                       </li>
                     </ul>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                      aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><i class="icon ion-ios-pie mr-1"></i>Portfólio</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="mb-5" id="chartdiv"></div>
-                            <div class="">
-                              <h5 class="mb-2 text-center">Abrir Portfólio</h5>
-                              <div class="row justify-content-center">
-                                <div class="com-12">
-                                  <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-sm btn-outline-primary">Bitcoin</button>
-                                    <button type="button" class="btn btn-sm btn-outline-primary">Ethereum</button>
-                                    <button type="button" class="btn btn-sm btn-outline-primary">Force Telecom</button>
-                                    <button type="button" class="btn btn-sm btn-outline-primary">Outros</button>
-                                  </div>
-
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
-                </div>
-                <div class="markets-container" id="chart-container">
-                  <div class="markets-content">
-                    <h2>BTC Index</h2>
-                    <p>7340.65</p>
-                    <span class="green"> + 0.55%</span>
+                  <div class="col-12">
+                    <div class="mb-5" id="chartdiv"></div>
                   </div>
-                  <div class="markets-chart">
-                    <div id="marketsChartBtcLight"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <h5 class="theme-color">Serviços Financeiros</h5>
-                <div class="row my-2">
-                  <div class="col-sm-6 col-md-4 mb-2">
-                    <a href="" class="btn btn-primary w-100">
-                      <p class="h6 mt-2">Boleto</p>
-                      <p class="fs-10 mt-3">Pagamento de Boletos</p>
-                      <i class="icon ion-ios-barcode service_icon"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-6 col-md-4 mb-2">
-                    <a href="" class="btn btn-primary w-100">
-                      <p class="h6 mt-2">Pix</p>
-                      <p class="fs-10 mt-3">Depósitos e Saques</p>
-                      <i class="icon ion-ios-cash service_icon"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-6 col-md-4 mb-2">
-                    <a href="" class="btn btn-primary w-100">
-                      <p class="h6 mt-2">Recarga</p>
-                      <p class="fs-10 mt-3">Recarga telefônica</p>
-                      <i class="icon ion-ios-phone-portrait service_icon"></i>
-                    </a>
-                  </div>
-                  <div class="col-sm-6 col-md-4 mb-2">
-                    <a href="" class="btn btn-primary w-100">
-                      <p class="h6 mt-2">Transferência</p>
-                      <p class="fs-10 mt-3">Tranferência de moedas</p>
-                      <i class="icon ion-ios-swap service_icon"></i>
-                    </a>
+                  <div class="col-12">
+                    <table class="table" id="portfolio">
+                      <thead class="text-center">
+                        <tr>
+                          <th>Token</th>
+                          <th>Quantidade</th>
+                          <th>Valor em CBRL</th>
+                          <th>24h</th>
+                          <th>Compra</th>
+                          <th>Venda</th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-center">
+                        <tr>
+                          <td>FTR</td>
+                          <td>501,9</td>
+                          <td>231,06</td>
+                          <td class="text-success">1,04%</td>
+                          <td><a href="#" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
+                          <td><a href="#" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>IMB</td>
+                          <td>301,9</td>
+                          <td>151,90</td>
+                          <td class="">0%</td>
+                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
+                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>LOC</td>
+                          <td>201,1</td>
+                          <td>55,06</td>
+                          <td class="text-success">4,04%</td>
+                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
+                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>JUD</td>
+                          <td>50</td>
+                          <td>11,1</td>
+                          <td class="text-danger">-1,04%</td>
+                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cart text-success"></i></a></td>
+                          <td><a href="" class="btn btn-sm bg-light"><i class="icon ion-ios-cash text-danger"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -379,6 +346,39 @@
           </div>
           <div class="col-lg-4">
             <div class="row my-2">
+              <div class="col-12">
+                <h5 class="theme-color">Serviços Financeiros</h5>
+                <div class="row my-2 justify-content-center">
+                  <div class="col-6 col-lg-12 mb-2">
+                    <a href="" class="btn btn-sm btn-primary w-100">
+                      <span class="d-block">Boleto</span>
+                      <span class="d-block"><i class="icon ion-ios-barcode service_icon"></i></span>
+                      <span class="fs-10">Pagamento de Boletos</span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-lg-12 mb-2">
+                    <a href="" class="btn btn-sm btn-primary w-100">
+                      <span class="d-block">Pix</span>
+                      <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
+                      <span class="fs-10">Depósitos e Saques</span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-lg-12 mb-2">
+                    <a href="" class="btn btn-sm btn-primary w-100">
+                      <span class="d-block">Recarga</span>
+                      <span class="d-block"><i class="icon ion-ios-phone-portrait service_icon"></i></span>
+                      <span class="fs-10">Recarga telefônica</span>
+                    </a>
+                  </div>
+                  <div class="col-6 col-lg-12 mb-2">
+                    <a href="" class="btn btn-sm btn-primary w-100">
+                      <span class="d-block">Transferência</span>
+                      <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
+                      <span class="fs-10">Transferência de Moedas</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div class="col">
                 <h5 class="theme-color">Recomendados para você</h5>
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -463,15 +463,9 @@
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.mCustomScrollbar.js"></script>
     <script src="assets/js/amcharts-core.min.js"></script>
     <script src="assets/js/amcharts.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script>
-      $('tbody, .market-news ul').mCustomScrollbar({
-        theme: 'minimal',
-      });
-    </script>
 </body>
 
 </html>

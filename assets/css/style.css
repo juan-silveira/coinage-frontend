@@ -2287,7 +2287,7 @@ tbody.ob-heading {
 }
 
 .service_icon {
-  font-size: 32px;
+  font-size: 20px;
 }
 
 .line {
@@ -2300,8 +2300,7 @@ tbody.ob-heading {
 }
 
 .button {
-  height: 30px;
-  margin-left: 1rem;
+  margin: auto;
 }
 
 .hidden{

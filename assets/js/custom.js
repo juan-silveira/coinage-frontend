@@ -923,18 +923,18 @@
 
   // Add data
   chart.data = [{
-    "products": "Bitcoin",
+    "products": "FTR",
     "share": 501.9,
     "color": am4core.color("#FCD535")
   }, {
-    "products": "Ethereum",
+    "products": "IMB",
     "share": 301.9,
     "color": am4core.color("#0f8f62")
   }, {
-    "products": "Force Telecom",
+    "products": "LOC",
     "share": 201.1
   }, {
-    "products": "Outros",
+    "products": "JUD",
     "share": 50
   }];
 
@@ -943,7 +943,7 @@
   pieSeries.dataFields.value = "share";
   pieSeries.dataFields.category = "products";
   pieSeries.slices.template.propertyFields.fill = "color";
-  pieSeries.innerRadius = am4core.percent(50);
+  pieSeries.innerRadius = am4core.percent(75);
   pieSeries.ticks.template.disabled = true;
   pieSeries.labels.template.disabled = true;
 
@@ -958,7 +958,7 @@
   pieSeries.slices.template.strokeOpacity = 1;
   pieSeries.slices.template.strokeWidth = 1;
   chart.legend = new am4charts.Legend();
-  chart.legend.position = "right";
+  chart.legend.position = "bottom";
 
   pieSeries.slices.template.events.on("validated", function (event) {
     var gradient = event.target.fillModifier.gradient
@@ -1030,6 +1030,16 @@ const balanceVisibility = () => {
     visible = true;
   }
 }
+
+window.addEventListener('load', (event) => {
+  const portfolio = document.querySelector('#portfolio');
+  portfolio.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
+});
+
+window.addEventListener('resize', () => {
+  const portfolio = document.querySelector('#portfolio');
+  portfolio.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
+});
 
 document.getElementById("sidebar-menu").addEventListener("click", changeActive);
 document.getElementById("visibility-button").addEventListener("click", balanceVisibility);
