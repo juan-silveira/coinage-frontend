@@ -205,8 +205,8 @@
       series.dataFields.valueY = 'prices';
       series.tooltipText = 'prices: [bold]{valueY}[/]';
       series.fillOpacity = 0.1;
-      series.fill = am4core.color('#00cc93');
-      series.stroke = am4core.color('#00cc93');
+      series.fill = am4core.color('#007BFF');
+      series.stroke = am4core.color('#007BFF');
       series.tooltip.getFillFromObject = false;
       series.tooltip.background.fill = am4core.color('#2a2e39');
       series.tooltip.background.stroke = am4core.color('#2a2e39');
@@ -221,7 +221,7 @@
       chart.zoomOutButton.icon.stroke = am4core.color('rgba(0, 0, 0, 0.40)');
       chart.zoomOutButton.background.states.getKey(
         'hover'
-      ).properties.fill = am4core.color('#00cc93');
+      ).properties.fill = am4core.color('#007BFF');
 
       function generateChartData() {
         var chartData = [];
@@ -918,6 +918,56 @@
     }
   }
 
+  // Create chart instance
+  var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+  // Add data
+  chart.data = [{
+    "products": "Bitcoin",
+    "share": 501.9,
+    "color": am4core.color("#FCD535")
+  }, {
+    "products": "Ethereum",
+    "share": 301.9,
+    "color": am4core.color("#0f8f62")
+  }, {
+    "products": "Force Telecom",
+    "share": 201.1
+  }, {
+    "products": "Outros",
+    "share": 50
+  }];
+
+  // Add and configure Series
+  var pieSeries = chart.series.push(new am4charts.PieSeries());
+  pieSeries.dataFields.value = "share";
+  pieSeries.dataFields.category = "products";
+  pieSeries.slices.template.propertyFields.fill = "color";
+  pieSeries.innerRadius = am4core.percent(50);
+  pieSeries.ticks.template.disabled = true;
+  pieSeries.labels.template.disabled = true;
+
+  var rgm = new am4core.LinearGradientModifier();
+  rgm.brightnesses.push(0, - 0.4);
+  pieSeries.slices.template.fillModifier = rgm;
+
+  var rgm2 = new am4core.LinearGradientModifier();
+  rgm2.brightnesses.push(0, - 0.4);
+
+  pieSeries.slices.template.strokeModifier = rgm2;
+  pieSeries.slices.template.strokeOpacity = 1;
+  pieSeries.slices.template.strokeWidth = 1;
+  chart.legend = new am4charts.Legend();
+  chart.legend.position = "right";
+
+  pieSeries.slices.template.events.on("validated", function (event) {
+    var gradient = event.target.fillModifier.gradient
+    gradient.rotation = event.target.middleAngle + 90;
+
+    var gradient2 = event.target.strokeModifier.gradient
+    gradient2.rotation = event.target.middleAngle + 90;
+  })
+
   // change theme
   var ThemeOn = false;
   $('#changeThemeLight').on('click', function (e) {
@@ -953,26 +1003,28 @@
   });
 })(jQuery);
 
-const changeActive = ({target}) => {
+const changeActive = ({ target }) => {
   // console.log(target.parentNode.childNodes[1, 3, 5, 7, 9])
   target.parentNode.childNodes.forEach((element, i) => {
-    if(i % 2 != 0 && i != target.parentNode.childNodes.length)
-    element.classList.remove("active")
+    if (i % 2 != 0 && i != target.parentNode.childNodes.length)
+      element.classList.remove("active")
   });
   target.classList.add("active");
 }
 let visible = true;
 const balanceVisibility = () => {
   const eye = document.getElementById("eye");
-  if(visible == true){
+  if (visible == true) {
     document.getElementById("balance-hidden").style.display = "block";
     document.getElementById("balance").style.display = "none";
+    document.getElementById("chart-container").style.display = "none";
     eye.classList.remove("ion-ios-eye");
     eye.classList.add("ion-ios-eye-off");
     visible = false;
   } else {
     document.getElementById("balance-hidden").style.display = "none";
     document.getElementById("balance").style.display = "block";
+    document.getElementById("chart-container").style.display = "block";
     eye.classList.remove("ion-ios-eye-off");
     eye.classList.add("ion-ios-eye");
     visible = true;

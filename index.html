@@ -243,7 +243,7 @@
                 <a href="" class="btn btn-primary fs-10 button">Saque</a>
                 <a href="" class="btn btn-primary fs-10 button">Comprar Moedas</a>
               </div>
-              <div class="col-12 mb-5" id="balance">
+              <div class="col-12 mb-3" id="balance">
                 <div class="d-flex">
                   <span class="theme-color" id="balance-crypto">
                     <span class="h5 font-weight-bold" id="balance-number">0.00000006</span>
@@ -271,9 +271,76 @@
                     </span>
                   </div>
                 </div>
+
               </div>
-              <div class="col-12 mb-5" id="balance-hidden">
-                <h4 class="theme-color"><span class="font-weight-bold">***Saldo e variações diárias escondidos***</span></h4>
+              <div class="col-12 mb-3 mt-2" id="balance-hidden">
+                <h4 class="theme-color"><span class="font-weight-bold">***Saldo e variações diárias escondidos***</span>
+                </h4>
+              </div>
+              <div class="col-12 mb-5">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-between">
+                    <div class="btn-group">
+                      <a href="#" class="btn btn-outline-primary active" aria-current="page">7 dias</a>
+                      <a href="#" class="btn btn-outline-primary">30 dias</a>
+                    </div>
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#" data-toggle="modal"
+                          data-target="#exampleModal"><i class="icon ion-ios-pie mr-1"></i>Portfólio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="icon ion-ios-wallet mr-1"></i>Minha Carteira</a>
+                      </li>
+                    </ul>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                      aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"><i class="icon ion-ios-pie mr-1"></i>Portfólio</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="mb-5" id="chartdiv"></div>
+                            <div class="">
+                              <h5 class="mb-2 text-center">Abrir Portfólio</h5>
+                              <div class="row justify-content-center">
+                                <div class="com-12">
+                                  <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">Bitcoin</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary">Ethereum</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary">Force Telecom</button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary">Outros</button>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="markets-container" id="chart-container">
+                  <div class="markets-content">
+                    <h2>BTC Index</h2>
+                    <p>7340.65</p>
+                    <span class="green"> + 0.55%</span>
+                  </div>
+                  <div class="markets-chart">
+                    <div id="marketsChartBtcLight"></div>
+                  </div>
+                </div>
               </div>
               <div class="col-12">
                 <h5 class="theme-color">Serviços Financeiros</h5>
@@ -397,6 +464,8 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/js/amcharts-core.min.js"></script>
+    <script src="assets/js/amcharts.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
       $('tbody, .market-news ul').mCustomScrollbar({

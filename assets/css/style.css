@@ -2321,6 +2321,13 @@ tbody.ob-heading {
   display: none;
 }
 
+#chartdiv {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  max-height: 100%;
+}
+
 @media only screen and (max-width: 1434px) {
   .market-pairs tbody {
     height: 760px;
