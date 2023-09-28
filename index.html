@@ -211,7 +211,7 @@
     </nav>
   </header>
   <div class="container-fluid no-fluid">
-    <div class="row sm-gutters">
+    <div class="row">
       <div class="col md-hidden">
         <ul class="d-flex my-2">
           <li>Menu 1</li>
@@ -231,12 +231,13 @@
         </div>
       </div>
       <div class="col-md-10">
-        <div class="row">
-          <div class="col-11 bg-header">
+        <div class="row justify-content-between">
+          <div class="col-12 bg-header">
             <h1 class="mt-3">Home</h1>
           </div>
+          
           <div class="col-lg-8">
-            <div class="row my-2">
+            <div class="row mb-5 mx-0 shadow" id="balance-card">
               <div class="col-12 d-flex justify-content-between my-2">
                 <h5 class="theme-color">Saldo Estimado <button class="btn btn-sm btn-light" id="visibility-button"><i
                       class="icon ion-ios-eye" id="eye"></button></i></h5>
@@ -282,7 +283,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-3">
+          <div class="col-lg-4 mb-5">
             <div class="row my-2">
               <div class="col">
                 <h5 class="theme-color">Recomendados para você</h5>
@@ -386,7 +387,7 @@
                   <h5 class="theme-color">Meu Capital</h5>
                 </div>
                 <p class="balance-hidden text-center">***Ative a visibilidade do saldo para ver o gráfico***</p>
-                <div class="dashboard-capital">
+                <div class="dashboard-capital shadow">
                   <div class="markets-container balance-visible">
                     <div class="markets-content">
                       <h2>BTC Index</h2>
@@ -405,7 +406,7 @@
                 <div class="mt-3">
                   <h5 class="theme-color">Portfólio</h5>
                 </div>
-                <div class="dashboard-portfolio">
+                <div class="dashboard-portfolio shadow">
                   <div class="row">
                     <div class="col-12">
                       <div class="mb-5" id="chartdiv"></div>
@@ -478,7 +479,7 @@
                 <div class="mt-3">
                   <h5 class="theme-color">Minha Carteira</h5>
                 </div>
-                <div class="dashboard-wallet">
+                <div class="dashboard-wallet shadow">
                   <table class="table" id="wallet">
                     <thead class="text-center">
                       <tr>
@@ -542,29 +543,36 @@
             </div>
           </div>
 
-          <div class="col-lg-8 mb-3 text-center">Algum conteúdo entra aqui!</div>
-          <div class="col-lg-4 mb-3">
+          <div class="col-lg-8 mb-5 ">
+            <h5 class="theme-color">Algum conteúdo entra aqui!</h5>
+            <div class="row my-2 mx-0 shadow">
+              <div class="col my-2">
+                <p>Texto do conteúdo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-5 ">
             <h5 class="theme-color">Serviços Financeiros</h5>
-            <div class="row my-2">
-              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+            <div class="row my-2 mx-0 shadow">
+              <div class="col-6 col-sm-3 col-lg-6 my-2">
                 <a href="" class="btn btn-sm btn-primary w-100">
                   <span class="d-block">Boleto</span>
                   <span class="d-block"><i class="icon ion-ios-barcode service_icon"></i></span>
                 </a>
               </div>
-              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+              <div class="col-6 col-sm-3 col-lg-6 my-2">
                 <a href="" class="btn btn-sm btn-primary w-100">
                   <span class="d-block">Pix</span>
                   <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
                 </a>
               </div>
-              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+              <div class="col-6 col-sm-3 col-lg-6 my-2">
                 <a href="" class="btn btn-sm btn-primary w-100">
                   <span class="d-block">Recarga</span>
                   <span class="d-block"><i class="icon ion-ios-phone-portrait service_icon"></i></span>
                 </a>
               </div>
-              <div class="col-6 col-sm-3 col-lg-6 mb-2">
+              <div class="col-6 col-sm-3 col-lg-6 my-2">
                 <a href="" class="btn btn-sm btn-primary w-100">
                   <span class="d-block">Transferência</span>
                   <span class="d-block"><i class="icon ion-ios-cash service_icon"></i></span>
