@@ -38,64 +38,23 @@ const handleVisibility = () => {
     }
 }
 
-// Create chart instance
-var chart = am4core.create("chartdiv", am4charts.PieChart);
-
-// Add data
-chart.data = [{
-    "products": "FTR",
-    "share": 501.9,
-    "color": am4core.color("#FCD535")
-}, {
-    "products": "IMB",
-    "share": 301.9,
-    "color": am4core.color("#0f8f62")
-}, {
-    "products": "LOC",
-    "share": 201.1
-}, {
-    "products": "JUD",
-    "share": 50
-}];
-
-const handleLoadPieChart = () => {
-    // Add and configure Series
-    var pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "share";
-    pieSeries.dataFields.category = "products";
-    pieSeries.slices.template.propertyFields.fill = "color";
-    pieSeries.innerRadius = am4core.percent(75);
-    pieSeries.ticks.template.disabled = true;
-    pieSeries.labels.template.disabled = true;
-
-    var rgm = new am4core.LinearGradientModifier();
-    rgm.brightnesses.push(0, - 0.4);
-    pieSeries.slices.template.fillModifier = rgm;
-
-    var rgm2 = new am4core.LinearGradientModifier();
-    rgm2.brightnesses.push(0, - 0.4);
-    pieSeries.slices.template.tooltipText = "{category}: {value.percent.formatNumber('#.#')}%";
-    pieSeries.slices.template.strokeModifier = rgm2;
-    pieSeries.slices.template.strokeOpacity = 1;
-    pieSeries.slices.template.strokeWidth = 1;
-    chart.legend = new am4charts.Legend();
-    chart.legend.position = "bottom";
-
-    pieSeries.slices.template.events.on("validated", function (event) {
-        var gradient = event.target.fillModifier.gradient
-        gradient.rotation = event.target.middleAngle + 90;
-
-        var gradient2 = event.target.strokeModifier.gradient
-        gradient2.rotation = event.target.middleAngle + 90;
-    })
+// Configurações do gráfico redondo
+const handleRadialChart = (id, percent, color) => {
+    const radChart = document.getElementById(id);
+    radChart.style = "--p: " + percent +"; --c:" + color;
+    radChart.innerText = percent + "%"
 }
+
+handleRadialChart("fi-chart", 41.4, "red");
+handleRadialChart("rf-chart", 35.6, "yellow");
+handleRadialChart("ac-chart", 13, "blue");
+handleRadialChart("rv-chart", 10, "green");
 
 window.addEventListener('load', () => {
     const portfolio = document.querySelector('#portfolio');
     const wallet = document.querySelector('#wallet');
     portfolio.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
     wallet.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
-    handleLoadPieChart();
 });
 
 window.addEventListener('resize', () => {
