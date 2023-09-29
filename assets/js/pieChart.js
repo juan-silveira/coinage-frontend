@@ -1,5 +1,9 @@
 am4core.ready(function () {
 
+     // License begin
+     am4core.addLicense("ch-custom-attribution");
+     // License end
+     
     // Themes begin
     am4core.useTheme(am4themes_animated);
     // Themes end

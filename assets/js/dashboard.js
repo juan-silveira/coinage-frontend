@@ -39,16 +39,23 @@ const handleVisibility = () => {
 }
 
 // Configurações do gráfico redondo
-const handleRadialChart = (id, percent, color) => {
+const handleRadialChart = (id, percent, color, width, fontSize) => {
+    
     const radChart = document.getElementById(id);
-    radChart.style = "--p: " + percent +"; --c:" + color;
-    radChart.innerText = percent + "%"
+    radChart.style = "--p: " + percent +"; --c:" + color +"; --w:" + width + "px" +"; font-size:" + fontSize + "px";
+    if(id === "dashboard-chart"){
+        radChart.innerHTML = `<span class="d-block mt-2 text-center">${percent}%</span><p class="fs-12 text-center">Total Investido</p>`
+    } else {
+        radChart.innerText = percent + "%";
+    }
 }
 
-handleRadialChart("fi-chart", 41.4, "red");
-handleRadialChart("rf-chart", 35.6, "yellow");
-handleRadialChart("ac-chart", 13, "blue");
-handleRadialChart("rv-chart", 10, "green");
+handleRadialChart("dashboard-chart", 55.47, "orange", 120, 20);
+handleRadialChart("fi-chart", 41.4, "red", 50, 14);
+handleRadialChart("rf-chart", 35.6, "yellow", 50, 14);
+handleRadialChart("ac-chart", 13, "blue", 50, 14);
+handleRadialChart("rv-chart", 10, "green", 50, 14);
+
 
 window.addEventListener('load', () => {
     const portfolio = document.querySelector('#portfolio');
