@@ -180,4 +180,14 @@
     .hidden {
         display: none;
     }
+    .radio-title, .fs-r {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+
+    #v-pills-tab {
+        font-size: 2.4vw;
+    }
 }
