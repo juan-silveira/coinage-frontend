@@ -1,12 +1,3 @@
-const changeActive = ({ target }) => {
-    // console.log(target.parentNode.childNodes[1, 3, 5, 7, 9])
-    target.parentNode.childNodes.forEach((element, i) => {
-        if (i % 2 != 0 && i != target.parentNode.childNodes.length)
-            element.classList.remove("active")
-    });
-    target.classList.add("active");
-}
-
 let balanceVisibility = true;
 
 const handleVisibility = () => {
@@ -43,7 +34,7 @@ const handleRadialChart = (id, percent, color, width, fontSize) => {
     
     const radChart = document.getElementById(id);
     radChart.style = "--p: " + percent +"; --c:" + color +"; --w:" + width + "px" +"; font-size:" + fontSize + "px";
-    if(id === "dashboard-chart"){
+    if(id === "dashboard-chart" || id === "portfolio-chart"){
         radChart.innerHTML = `<span class="d-block mt-2 text-center">${percent}%</span><p class="fs-12 text-center">Total Investido</p>`
     } else {
         radChart.innerText = percent + "%";
@@ -51,6 +42,7 @@ const handleRadialChart = (id, percent, color, width, fontSize) => {
 }
 
 handleRadialChart("dashboard-chart", 55.47, "orange", 120, 20);
+handleRadialChart("portfolio-chart", 55.47, "orange", 120, 20);
 handleRadialChart("fi-chart", 41.4, "red", 50, 14);
 handleRadialChart("rf-chart", 35.6, "yellow", 50, 14);
 handleRadialChart("ac-chart", 13, "blue", 50, 14);
@@ -71,5 +63,4 @@ window.addEventListener('resize', () => {
     wallet.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
 });
 
-document.getElementById("sidebar-menu").addEventListener("click", changeActive);
 document.getElementById("visibility-button").addEventListener("click", handleVisibility);

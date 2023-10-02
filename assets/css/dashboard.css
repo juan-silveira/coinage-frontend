@@ -103,6 +103,10 @@
     font-size: 20px;
 }
 
+#performance-chart{
+    min-height: 300px;
+}
+
 /* Controle do gráfico radial nos collapses */
 
 @property --p {

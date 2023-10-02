@@ -214,94 +214,22 @@
   </header>
   <div class="container-fluid no-fluid">
     <div class="row">
-      <div class="col md-hidden">
-        <ul class="d-flex my-2">
-          <li>Menu 1</li>
-          <li class="ml-4">Menu 2</li>
-          <li class="ml-4">Menu 3</li>
-          <li class="ml-4">Menu 4</li>
-          <li class="ml-4">Menu 5</li>
-        </ul>
-      </div>
-      <div class="col-md-2 hidden">
-        <div class="list-group" id="sidebar-menu">
-          <a href="#" class="list-group-item list-group-item-action">Menu 1</a>
-          <a href="#" class="list-group-item list-group-item-action">Menu 2</a>
-          <a href="#" class="list-group-item list-group-item-action active">Menu 3</a>
-          <a href="#" class="list-group-item list-group-item-action">Menu 4</a>
-          <a href="#" class="list-group-item list-group-item-action">Menu 5</a>
-        </div>
-      </div>
-      <div class="col-md-10">
+      <div class="col">
         <div class="row justify-content-between">
-          <div class="col-12 bg-header mb-3">
-            <h1 class="mt-3">Home<button class="btn btn-sm btn-light ml-2" id="visibility-button"><i
-              class="icon ion-ios-eye" id="eye"></i></button></h1>
-          </div>
-
-          <!-- <div class="col-lg-8">
-            <div class="row mb-5 mx-0 shadow" id="balance-card">
-              <div class="col-12 d-flex justify-content-between my-2">
-                <h5 class="theme-color">Saldo Estimado <button class="btn btn-sm btn-light" id="visibility-button"><i
-                      class="icon ion-ios-eye" id="eye"></i></button></h5>
-                <div class="buttons">
-                  <a href="" class="btn btn-sm btn-warning fs-10 button">Depósito</a>
-                  <a href="" class="btn btn-sm btn-primary fs-10 button">Saque</a>
-                  <a href="" class="btn btn-sm btn-primary fs-10 button">Comprar Moedas</a>
-                </div>
-              </div>
-              <div class="col-12 mb-3 balance-visible">
-                <div class="d-flex">
-                  <span class="theme-color" id="balance-crypto">
-                    <span class="h5 font-weight-bold" id="balance-number">1054.9000</span>
-                    <span class="ml-1 h5 font-weight-bold" id="balance-symbol">CBRL</span>
-                  </span>
-                  <div class="dropdown">
-                    <button class="btn btn-sm btn-primary ml-2" type="button" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false" id="symbol-down">
-                      <i class="icon ion-ios-arrow-down"></i>
-                    </button>
-                    <ul class="dropdown-menu mt-5 mr-15">
-                      <li><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/18.png"
-                            alt="symbol"><span class="theme-color">BTC</span></a></li>
-                      <li><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/1.png"
-                            alt="symbol"><span class="theme-color">ETH</span></a></li>
-                      <li><a class="dropdown-item" href="#"><img class="symbol" src="assets/img/icon/2.png"
-                            alt="symbol"><span class="theme-color">CBRL</span></a></li>
-                    </ul>
-                  </div>
-                  <div class="d-flex ml-3">
-                    <span class="theme-color">
-                      <span class="h5">≈</span>
-                      <span class="h5 ml-1" id="balance-symbol">CBRL</span>
-                      <span class="h5" id="balance-number">1054.9000</span>
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-12 mb-3 mt-2 text-center balance-hidden">
-                <h6 class="theme-color"><span class="font-weight-bold">***Saldo ocultado em toda a plataforma***</span>
-                </h6>
-              </div>
-            </div>
-          </div> -->
-          
           <div class="dashboard col-12 mb-5">
             <div class="row">
               <div class="col-12 d-flex">
                 <div class="nav nav-pills dashboard-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                   <a class="nav-link active" id="dashboard-tab" data-toggle="pill" href="#dashboard" role="tab"
                     aria-controls="dashboard" aria-selected="true"><i class="icon ion-ios-home mr-1"></i>Dashboard</a>
-                  <a class="nav-link" id="dashboard-capital-tab" data-toggle="pill" href="#dashboard-capital" role="tab"
-                    aria-controls="dashboard-capital" aria-selected="true"><i class="icon ion-ios-stats mr-1"></i>Meu
-                    Capital</a>
                   <a class="nav-link" id="dashboard-portfolio-tab" data-toggle="pill" href="#dashboard-portfolio"
                     role="tab" aria-controls="dashboard-portfolio" aria-selected="false"><i
                       class="icon ion-ios-pie mr-1"></i>Portfólio</a>
                   <a class="nav-link" id="dashboard-wallet-tab" data-toggle="pill" href="#dashboard-wallet" role="tab"
                     aria-controls="dashboard-wallet" aria-selected="false"><i class="icon ion-ios-wallet mr-1"></i>Minha
                     Carteira</a>
+                  <button class="btn btn-sm btn-light ml-2" id="visibility-button"><i class="icon ion-ios-eye"
+                      id="eye"></i></button>
                 </div>
               </div>
             </div>
@@ -366,10 +294,13 @@
                           </div>
                         </div>
                         <div class="border-top mt-3">
-                          <a href=""><p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i class="icon ion-ios-arrow-forward text-warning"></i></p></a>
+                          <a href="">
+                            <p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i
+                                class="icon ion-ios-arrow-forward text-warning"></i></p>
+                          </a>
                         </div>
                       </div>
-                      
+
                       <div class="col-xl-4 mb-3">
                         <div class="row my-2">
                           <div class="col">
@@ -379,7 +310,8 @@
                                 <div class="carousel-item active">
                                   <div class="row align-items-center">
                                     <div class="col-3">
-                                      <img src="assets/img/icon/convert.svg" class="d-block w-100 carousel_icon" alt="...">
+                                      <img src="assets/img/icon/convert.svg" class="d-block w-100 carousel_icon"
+                                        alt="...">
                                     </div>
                                     <div class="col-9">
                                       <div class="text-white fs-10 mr-4 mt-3 ml-1">
@@ -405,7 +337,8 @@
                                 <div class="carousel-item">
                                   <div class="row align-items-center">
                                     <div class="col-3">
-                                      <img src="assets/img/icon/futures.svg" class="d-block w-100 carousel_icon" alt="...">
+                                      <img src="assets/img/icon/futures.svg" class="d-block w-100 carousel_icon"
+                                        alt="...">
                                     </div>
                                     <div class="col-9">
                                       <div class="text-white fs-10 mr-4 mt-3 ml-1">
@@ -429,12 +362,14 @@
                                   </div>
                                 </div>
                               </div>
-            
-                              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+
+                              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                               </a>
-                              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                               </a>
@@ -449,26 +384,59 @@
                         </div>
                       </div>
                     </div>
-                    
                   </div>
-                </div>
-              </div>
 
-              <div class="tab-pane fade" id="dashboard-capital" role="tabpanel" aria-labelledby="dashboard-capital-tab">
-                <div class="mt-3">
-                  <h5 class="theme-color">Meu Capital</h5>
-                </div>
-                <p class="balance-hidden text-center">***Ative a visibilidade do saldo para ver o gráfico***</p>
-                <div class="dashboard-capital shadow">
-                  <div class="markets-container balance-visible">
-                    <div class="markets-content">
-                      <h2>BTC Index</h2>
-                      <p>7340.65</p>
-                      <span class="green"> + 0.45%</span>
+                  <div class="col-12">
+                    <p class="h5">
+                      Performance da sua carteira e recomendado para você
+                    </p>
+                    <p>
+                      Acompanhe a performance da sua carteira e também as nossas recomendações. Para visualizar mais
+                      detalhes, acessa a aba <b>Minha Carteira</b>.
+                    </p>
+                  </div>
+                  <div class="col-12 shadow">
+                    <p class="mt-3">
+                      Performance da sua carteira
+                    </p>
+                    <div class="row">
+                      <div class="col-md-9">
+                        <div id="performance-chart"></div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="mt-2">
+                          <span class="font-weight-bold d-block">
+                            Rendimento
+                          </span>
+                          <span class="text-success">
+                            R$ 2.336,52
+                          </span>
+                        </div>
+                        <div class="mt-2">
+                          <span class="font-weight-bold d-block">
+                            Rentabilidade
+                          </span>
+                          <span class="text-success">
+                            19.17%
+                          </span>
+                        </div>
+                        <div class="mt-2">
+                          <span class="font-weight-bold d-block">
+                            Rentabilidade CDI
+                          </span>
+                          <span class="text-success">
+                            145.50%
+                          </span>
+                        </div>
+                        <div class="mt-5">
+                          <p class="h5">
+                            Visualizar Evolução Completa <i class="icon ion-ios-arrow-forward text-warning"></i>
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="markets-chart">
-                      <div id="marketsChartBtcLight"></div>
-                    </div>
+
+
                   </div>
                 </div>
               </div>
@@ -478,11 +446,129 @@
                 <div class="mt-3">
                   <h5 class="theme-color">Portfólio</h5>
                 </div>
+                <div class="row justify-content-around align-items-center">
+                  <div class="col-12 col-sm-3 col-lg-2 d-flex justify-content-center">
+                    <div class="pie animate no-round" id="portfolio-chart">0%</div>
+                  </div>
+                  <div class="col-12 col-sm-9 col-lg-10">
+                    <div class="row mt-3">
+                      <div class="col-xl-8 mb-3">
+                        <div class="row">
+                          <div class="col-md-5 mb-5">
+                            <span class="d-block">Ivan Carlos, este é o seu patrimônio</span>
+                            <span class="fs-20 d-block font-weight-bold">R$ 14.620,67</span>
+                            <span>Atualizado em 29/09/2023, 09:47</span>
+                          </div>
+                          <div class="col-md-7 d-flex vl-60">
+                            <div class="ml-4">
+                              <p>Saldo disponível</p>
+                              <p class="h6"> R$ 6.510,62</p>
+                            </div>
+                            <div class="ml-4">
+                              <p>Total investido</p>
+                              <p class="h6"> R$ 8.110,05</p>
+                            </div>
+                            <div class="ml-4">
+                              <p>Saldo projetado</p>
+                              <p class="h6"> R$ 6.510,62</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="border-top mt-3">
+                          <a href="">
+                            <p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i
+                                class="icon ion-ios-arrow-forward text-warning"></i></p>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-4 mb-3">
+                        <div class="row my-2">
+                          <div class="col">
+                            <h5 class="theme-color">Recomendados para você</h5>
+                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner bg-primary rounded">
+                                <div class="carousel-item active">
+                                  <div class="row align-items-center">
+                                    <div class="col-3">
+                                      <img src="assets/img/icon/convert.svg" class="d-block w-100 carousel_icon"
+                                        alt="...">
+                                    </div>
+                                    <div class="col-9">
+                                      <div class="text-white fs-10 mr-4 mt-3 ml-1">
+                                        <p class="h6">First slide label</p>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <div class="row align-items-center">
+                                    <div class="col-3">
+                                      <img src="assets/img/icon/earn.svg" class="d-block w-100 carousel_icon" alt="...">
+                                    </div>
+                                    <div class="col-9">
+                                      <div class="text-white fs-10 mr-4 mt-3 ml-1">
+                                        <p class="h6">First slide label</p>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <div class="row align-items-center">
+                                    <div class="col-3">
+                                      <img src="assets/img/icon/futures.svg" class="d-block w-100 carousel_icon"
+                                        alt="...">
+                                    </div>
+                                    <div class="col-9">
+                                      <div class="text-white fs-10 mr-4 mt-3 ml-1">
+                                        <p class="h6">First slide label</p>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <div class="row align-items-center">
+                                    <div class="col-3">
+                                      <img src="assets/img/icon/spot.svg" class="d-block w-100 carousel_icon" alt="...">
+                                    </div>
+                                    <div class="col-9">
+                                      <div class="text-white fs-10 mr-4 mt-3 ml-1">
+                                        <p class="h6">First slide label</p>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                              <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                              </ol>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="dashboard-portfolio shadow">
                   <div class="row">
-                    <!-- <div class="col-12">
-                      <div class="mb-5" id="pieChartdiv"></div>
-                    </div> -->
                     <div class="col-12">
                       <a class="card card-header text-dark border-0" data-toggle="collapse" href="#fundos-imobiliarios"
                         role="button" aria-expanded="false" aria-controls="fundos-imobiliarios">
@@ -568,8 +654,10 @@
                               </tbody>
                             </table>
                             <div class="d-flex justify-content-around my-5">
-                              <button class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                              <button
+                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                              <button
+                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
                             </div>
                           </div>
                           <div class="col-0 col-lg-1"></div>
@@ -668,8 +756,10 @@
                               </tbody>
                             </table>
                             <div class="d-flex justify-content-around my-5">
-                              <button class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                              <button
+                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                              <button
+                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
                             </div>
                           </div>
                           <div class="col-0 col-lg-1"></div>
@@ -768,8 +858,10 @@
                               </tbody>
                             </table>
                             <div class="d-flex justify-content-around my-5">
-                              <button class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                              <button
+                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                              <button
+                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
                             </div>
                           </div>
                           <div class="col-0 col-lg-1"></div>
@@ -868,8 +960,10 @@
                               </tbody>
                             </table>
                             <div class="d-flex justify-content-around my-5">
-                              <button class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                              <button
+                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                              <button
+                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
                             </div>
                           </div>
                           <div class="col-0 col-lg-1"></div>
@@ -1010,6 +1104,7 @@
     <script src="assets/js/custom.js"></script>
     <!-- <script src="assets/js/pieChart.js"></script> -->
     <script src="assets/js/lineChart.js"></script>
+    <script src="assets/js/valueAxisChart.js"></script>
     <script src="assets/js/dashboard.js"></script>
 
 </body>
