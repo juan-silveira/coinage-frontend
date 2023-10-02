@@ -41,13 +41,11 @@ const handleRadialChart = (id, percent, color, width, fontSize) => {
     }
 }
 
-handleRadialChart("dashboard-chart", 55.47, "orange", 120, 20);
-handleRadialChart("portfolio-chart", 55.47, "orange", 120, 20);
-handleRadialChart("fi-chart", 41.4, "red", 50, 14);
-handleRadialChart("rf-chart", 35.6, "yellow", 50, 14);
-handleRadialChart("ac-chart", 13, "blue", 50, 14);
-handleRadialChart("rv-chart", 10, "green", 50, 14);
-
+// handleRadialChart("dashboard-chart", 55.47, "orange", 120, 20);
+handleRadialChart("fi-chart", 23.8, "red", 50, 14);
+handleRadialChart("rf-chart", 16.4, "yellow", 50, 14);
+handleRadialChart("ac-chart", 11, "blue", 50, 14);
+handleRadialChart("rv-chart", 2.7, "green", 50, 14);
 
 window.addEventListener('load', () => {
     const portfolio = document.querySelector('#portfolio');

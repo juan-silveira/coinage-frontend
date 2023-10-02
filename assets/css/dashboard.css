@@ -171,6 +171,15 @@
     content: none;
 }
 
+#total-invested-chart{
+    position: relative;
+}
+
+.innerPieText{
+    position: absolute;
+    transform: translateY(50px);
+}
+
 @keyframes p {
     from {
         --p: 0
