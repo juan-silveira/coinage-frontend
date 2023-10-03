@@ -4,75 +4,92 @@ am4core.ready(function() {
     am4core.useTheme(am4themes_animated);
     // Themes end
     
-    // Create chart instance
+    // Create chart instance(2023
     var chart = am4core.create("performance-chart", am4charts.XYChart);
     
+    chart.numberFormatter.language.locale = am4lang_pt_BR;
     chart.dateFormatter.dateFormat = "MMM YYYY";
-    console.log(chart)
     chart.numberFormatter.numberFormat = "#.#%";
     
     // Chart title
     var title = chart.titles.create();
-    title.text = "Projected infection dynamics";
+    // title.text = "Projected infection dynamics";
     title.fontSize = 20;
     title.paddingBottom = 10;
     
     // Add data
     chart.data = [{
-      "date": new Date(2020, 0, 1),
-      "observed": 0 / 100,
-      "stricter": -50 / 100,
-      "navi": 100 / 100
+      "date": new Date(2023, 0, 1),
+      "cx": 70 / 100,
+      "cflex": 50 / 100,
+      "cdi": 50 / 100,
+      "force":  50 / 100
     }, {
-      "date": new Date(2020, 1, 1),
-      "observed": 0 / 100,
-      "stricter": -100 / 100
+      "date": new Date(2023, 1, 1),
+      "cx": 60 / 100,
+      "cflex": 55 / 100,
+      "cdi": 50 / 100,
+      "force":  55 / 100
     }, {
-      "date": new Date(2020, 2, 1),
-      "observed": 0 / 100
+      "date": new Date(2023, 2, 1),
+      "cx": 60 / 100,
+      "cflex": 45 / 100,
+      "cdi": 50 / 100,
+      "force":  65 / 100
     }, {
-      "date": new Date(2020, 3, 1),
-      "observed": 0 / 100
+      "date": new Date(2023, 3, 1),
+      "cx": 70 / 100,
+      "cflex": 58 / 100,
+      "cdi": 50 / 100,
+      "force":  70 / 100
     }, {
-      "date": new Date(2020, 4, 1),
-      "observed": 0 / 100
+      "date": new Date(2023, 4, 1),
+      "cx": 70 / 100,
+      "cflex": 66 / 100,
+      "cdi": 50 / 100,
+      "force":  60 / 100
     }, {
-      "date": new Date(2020, 5, 1),
-      "observed": 0 / 100,
-      "navi": 100 / 100
+      "date": new Date(2023, 5, 1),
+      "cx": 80 / 100,
+      "cflex": 80 / 100,
+      "cdi": 50 / 100,
+      "force":  68 / 100
     }, {
-      "date": new Date(2020, 6, 1),
-      "observed": 0 / 100,
-      "easing": 80 / 100,
-      "projection": 100 / 100,
-      "stricter": -75 / 100
+      "date": new Date(2023, 6, 1),
+      "cx": 80 / 100,
+      "cflex": 60 / 100,
+      "cdi": 50 / 100,
+      "force":  70 / 100
     }, {
-      "date": new Date(2020, 7, 1),
-      "easing": 25 / 100,
-      "projection": 25 / 100,
-      "stricter": 0 / 100
+      "date": new Date(2023, 7, 1),
+      "cx": 90 / 100,
+      "cflex": 40 / 100,
+      "cdi": 50 / 100,
+      "force":  80 / 100
     }, {
-      "date": new Date(2020, 8, 1),
-      "easing": 25 / 100,
-      "projection": 25 / 100,
-      "stricter": 50 / 100
+      "date": new Date(2023, 8, 1),
+      "cx": 90 / 100,
+      "cflex": 70 / 100,
+      "cdi": 50 / 100,
+      "force":  60 / 100
     }, {
-      "date": new Date(2020, 9, 1),
-      "easing": 25 / 100,
-      "projection": 50 / 100,
-      "stricter": 0 / 100
+      "date": new Date(2023, 9, 1),
+      "cx": 100 / 100,
+      "cflex": 50 / 100,
+      "cdi": 50 / 100,
+      "force":  50 / 100
     }, {
-      "date": new Date(2020, 10, 1),
-      "easing": 0 / 100,
-      "projection": 50 / 100,
-      "stricter": 100 / 100
+      "date": new Date(2023, 10, 1),
+      "cx": 100 / 100,
+      "cflex": 20 / 100,
+      "cdi": 50 / 100,
+      "force":  80 / 100
     }, {
-      "date": new Date(2020, 11, 1),
-      "observed": 0 / 100,
-      "easing": 0 / 100,
-      "projection": 0 / 100,
-      "stricter": 0 / 100,
-      "navi": 100 / 100
+      "date": new Date(2023, 11, 1),
+      "cx": 110 / 100,
+      "cflex": 80 / 100,
+      "cdi": 50 / 100,
+      "force":  100 / 100
     }];
     
     // Create axes
@@ -86,7 +103,7 @@ am4core.ready(function() {
     valueAxis.renderer.labels.template.dx = -5;
     valueAxis.renderer.labels.template.dy = 10;
     valueAxis.renderer.maxLabelPosition = 0.95;
-    valueAxis.title.text = "Number of infections";
+    // valueAxis.title.text = "Number of infections";
     valueAxis.title.marginRight = 5;
     
     // Create series
@@ -107,11 +124,10 @@ am4core.ready(function() {
       return series;
     }
     
-    createSeries("observed", "Observed", am4core.color("#B1B106"));
-    createSeries("easing", "Easing rules", am4core.color("#D68C45"), true);
-    createSeries("stricter", "Stricter rules", am4core.color("#2C6E49"), true);
-    createSeries("projection", "Projection", am4core.color("#B1B106"), true);
-    createSeries("navi", "Navi", am4core.color("black"));
+    createSeries("cx", "CoinX", am4core.color("black"));
+    createSeries("cflex", "Coin Flex", am4core.color("blue"));
+    createSeries("cdi", "CDI", am4core.color("red"), true);
+    createSeries("force", "Force", am4core.color("orange"));
     chart.legend = new am4charts.Legend();
     chart.cursor = new am4charts.XYCursor();
     

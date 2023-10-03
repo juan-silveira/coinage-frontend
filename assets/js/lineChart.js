@@ -639,3 +639,7 @@ handleLineChart("ftr-lineChart", dados);
 handleLineChart("jud-lineChart", dados);
 handleLineChart("imb-lineChart", dados);
 handleLineChart("loc-lineChart", dados);
+handleLineChart("ftr-wallet-lineChart", dados);
+handleLineChart("jud-wallet-lineChart", dados);
+handleLineChart("imb-wallet-lineChart", dados);
+handleLineChart("loc-wallet-lineChart", dados);

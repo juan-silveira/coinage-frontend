@@ -112,6 +112,13 @@
     margin: 0 auto;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
+.cursor:hover{
+    background-color: #eee;
+}
 /* Controle do gráfico radial nos collapses */
 
 @property --p {
