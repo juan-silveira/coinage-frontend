@@ -384,8 +384,6 @@
                           </a>
                         </div>
                       </div>
-
-
                     </div>
                   </div>
 
@@ -489,408 +487,438 @@
                 <div class="dashboard-portfolio shadow">
                   <div class="row">
                     <div class="col-12">
-                      <a class="card card-header text-dark border-0" data-toggle="collapse" href="#fundos-imobiliarios"
-                        role="button" aria-expanded="false" aria-controls="fundos-imobiliarios">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="w-75">
-                            <div class="pie animate no-round" id="fi-chart">0%</div>
-                            <span class="font-weight-bold font-card fs-r">Fundos Imobiliários</span>
+                      <div class="accordion" id="portfolio-accordion">
+                        <div class="card">
+                          <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="w-75">
+                                <div class="pie animate no-round" id="fi-chart">0%</div>
+                                <span class="font-weight-bold font-card fs-r">Fundos Imobiliários</span>
+                              </div>
+                              <div class="vl font-weight-bold w-50">
+                                <span class="d-block ml-4 fs-r">Saldo</span>
+                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                              </div>
+                              <span class="vl d-flex align-items-center justify-content-center w-10"><i
+                                  class="icon ion-ios-arrow-down ml-3"></i></span>
+                            </div>
                           </div>
-                          <div class="vl font-weight-bold w-50">
-                            <span class="d-block ml-4 fs-r">Saldo</span>
-                            <span class="ml-4 fs-r">R$ 6.0056,00</span>
-                          </div>
-                          <span class="vl d-flex align-items-center justify-content-center w-10"><i
-                              class="icon ion-ios-arrow-down ml-3"></i></span>
-                        </div>
-                      </a>
 
-                      <div class="collapse" id="fundos-imobiliarios">
-                        <table class="table table-responsive mt-2" id="portfolio">
-                          <thead class="text-center">
-                            <tr>
-                              <th>Token</th>
-                              <th>Quantidade</th>
-                              <th>Valor em CBRL</th>
-                              <th>24h</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody class="text-center">
-                            <tr data-toggle="collapse" href="#token-ftr" role="button" aria-expanded="false"
-                              aria-controls="token-ftr">
-                              <td><img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
-                                  class="theme-color">FTR</span></td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
-                              </td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
-                              </td>
-                              <td class="text-success">1,04%</td>
-                              <td><i class="icon ion-ios-arrow-down"></i></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="collapse border-top" id="token-ftr">
-                        <div class="row justify-content-center mb-4">
-                          <div class="col-10 mb-3">
-                            <div>
-                              <span class="d-block ml-2 mt-4">Token</span>
-                              <span class="theme-color ml-2">FTR</span>
+                          <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#portfolio-accordion">
+                            <div class="card-body">
+                              <table class="table table-responsive mt-2" id="portfolio">
+                                <thead class="text-center">
+                                  <tr>
+                                    <th>Token</th>
+                                    <th>Quantidade</th>
+                                    <th>Valor em CBRL</th>
+                                    <th>24h</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-ftr" role="button" aria-expanded="false"
+                                    aria-controls="token-ftr">
+                                    <td><img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
+                                        class="theme-color">FTR</span></td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">501,9</span>
+                                    </td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">231,06</span>
+                                    </td>
+                                    <td class="text-success">1,04%</td>
+                                    <td><i class="icon ion-ios-arrow-down"></i></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="collapse border-top" id="token-ftr">
+                                <div class="row justify-content-center mb-4">
+                                  <div class="col-10 mb-3">
+                                    <div>
+                                      <span class="d-block ml-2 mt-4">Token</span>
+                                      <span class="theme-color ml-2">FTR</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                        Posição</span>
+                                      <span class="ml-2 mb-2">Ver mais detalhes</span>
+                                    </div>
+                                    <table class="table table-responsive mt-2">
+                                      <thead class="text-center">
+                                        <tr>
+                                          <th>Rendimento</th>
+                                          <th>Projetado</th>
+                                          <th>Negociado do dia</th>
+                                          <th>Em garantia</th>
+                                          <th>Liquidação de termo</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="text-center">
+                                        <tr>
+                                          <td><span class="balance-hidden">****</span><span class="balance-visible">R$
+                                              160,00</span></td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-around my-5">
+                                      <button
+                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                                      <button
+                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 font-weight-bold">
+                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                    </div>
+                                    <div class="lineChartdiv" id="ftr-lineChart"></div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                              <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
-                              <span class="ml-2 mb-2">Ver mais detalhes</span>
-                            </div>
-                            <table class="table table-responsive mt-2">
-                              <thead class="text-center">
-                                <tr>
-                                  <th>Rendimento</th>
-                                  <th>Projetado</th>
-                                  <th>Negociado do dia</th>
-                                  <th>Em garantia</th>
-                                  <th>Liquidação de termo</th>
-                                </tr>
-                              </thead>
-                              <tbody class="text-center">
-                                <tr data-toggle="collapse" href="#token-ftr" role="button" aria-expanded="false"
-                                  aria-controls="token-ftr">
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">R$
-                                      160,00</span></td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="d-flex justify-content-around my-5">
-                              <button
-                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button
-                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
-                            </div>
-                          </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 font-weight-bold">
-                              <h5 class="ml-2 mb-2">Evolução do ativo</h5>
-                            </div>
-                            <div class="lineChartdiv" id="ftr-lineChart"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 mt-2">
-                      <a class="card card-header text-dark border-0" data-toggle="collapse" href="#renda-fixa"
-                        role="button" aria-expanded="false" aria-controls="renda-fixa">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="w-75">
-                            <div class="pie animate no-round" id="rf-chart">0%</div>
-                            <span class="font-weight-bold font-card fs-r">Renda Fixa</span>
-                          </div>
-                          <div class="vl font-weight-bold w-50">
-                            <span class="d-block ml-4 fs-r">Saldo</span>
-                            <span class="ml-4 fs-r">R$ 6.0056,00</span>
-                          </div>
-                          <span class="vl d-flex align-items-center justify-content-center w-10"><i
-                              class="icon ion-ios-arrow-down ml-3"></i></span>
-                        </div>
-                      </a>
-
-                      <div class="collapse" id="renda-fixa">
-                        <table class="table mt-2" id="">
-                          <thead class="text-center">
-                            <tr>
-                              <th>Token</th>
-                              <th>Quantidade</th>
-                              <th>Valor em CBRL</th>
-                              <th>24h</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody class="text-center">
-                            <tr data-toggle="collapse" href="#token-jud" role="button" aria-expanded="false"
-                              aria-controls="token-jud">
-                              <td><img class="symbol" src="assets/img/icon/1.png" alt="symbol"><span
-                                  class="theme-color">JUD</span></td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
-                              </td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
-                              </td>
-                              <td class="text-success">1,04%</td>
-                              <td><i class="icon ion-ios-arrow-down"></i></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="collapse border-top" id="token-jud">
-                        <div class="row justify-content-center mb-4">
-                          <div class="col-10 mb-3">
-                            <div>
-                              <span class="d-block ml-2 mt-4">Token</span>
-                              <span class="theme-color ml-2">JUD</span>
-                            </div>
-                          </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                              <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
-                              <span class="ml-2 mb-2">Ver mais detalhes</span>
-                            </div>
-                            <table class="table table-responsive mt-2">
-                              <thead class="text-center">
-                                <tr>
-                                  <th>Rendimento</th>
-                                  <th>Projetado</th>
-                                  <th>Negociado do dia</th>
-                                  <th>Em garantia</th>
-                                  <th>Liquidação de termo</th>
-                                </tr>
-                              </thead>
-                              <tbody class="text-center">
-                                <tr data-toggle="collapse" href="#token-jud" role="button" aria-expanded="false"
-                                  aria-controls="token-jud">
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">R$
-                                      160,00</span></td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="d-flex justify-content-around my-5">
-                              <button
-                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button
-                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
-                            </div>
-                          </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 font-weight-bold">
-                              <h5 class="ml-2 mb-2">Evolução do ativo</h5>
-                            </div>
-                            <div class="lineChartdiv" id="jud-lineChart"></div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 mt-2">
-                      <a class="card card-header text-dark border-0" data-toggle="collapse" href="#stocks" role="button"
-                        aria-expanded="false" aria-controls="stocks">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="w-75">
-                            <div class="pie animate no-round" id="ac-chart">0%</div>
-                            <span class="font-weight-bold font-card fs-r">Ações</span>
+                        <div class="card">
+                          <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="w-75">
+                                <div class="pie animate no-round" id="rf-chart">0%</div>
+                                <span class="font-weight-bold font-card fs-r">Renda Fixa</span>
+                              </div>
+                              <div class="vl font-weight-bold w-50">
+                                <span class="d-block ml-4 fs-r">Saldo</span>
+                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                              </div>
+                              <span class="vl d-flex align-items-center justify-content-center w-10"><i
+                                  class="icon ion-ios-arrow-down ml-3"></i></span>
+                            </div>
                           </div>
-                          <div class="vl font-weight-bold w-50">
-                            <span class="d-block ml-4 fs-r">Saldo</span>
-                            <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#portfolio-accordion">
+                            <div class="card-body">
+                              <table class="table mt-2" id="">
+                                <thead class="text-center">
+                                  <tr>
+                                    <th>Token</th>
+                                    <th>Quantidade</th>
+                                    <th>Valor em CBRL</th>
+                                    <th>24h</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-jud" role="button" aria-expanded="false"
+                                    aria-controls="token-jud">
+                                    <td><img class="symbol" src="assets/img/icon/1.png" alt="symbol"><span
+                                        class="theme-color">JUD</span></td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">501,9</span>
+                                    </td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">231,06</span>
+                                    </td>
+                                    <td class="text-success">1,04%</td>
+                                    <td><i class="icon ion-ios-arrow-down"></i></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="collapse border-top" id="token-jud">
+                                <div class="row justify-content-center mb-4">
+                                  <div class="col-10 mb-3">
+                                    <div>
+                                      <span class="d-block ml-2 mt-4">Token</span>
+                                      <span class="theme-color ml-2">JUD</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                        Posição</span>
+                                      <span class="ml-2 mb-2">Ver mais detalhes</span>
+                                    </div>
+                                    <table class="table table-responsive mt-2">
+                                      <thead class="text-center">
+                                        <tr>
+                                          <th>Rendimento</th>
+                                          <th>Projetado</th>
+                                          <th>Negociado do dia</th>
+                                          <th>Em garantia</th>
+                                          <th>Liquidação de termo</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="text-center">
+                                        <tr>
+                                          <td><span class="balance-hidden">****</span><span class="balance-visible">R$
+                                              160,00</span></td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-around my-5">
+                                      <button
+                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                                      <button
+                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 font-weight-bold">
+                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                    </div>
+                                    <div class="lineChartdiv" id="jud-lineChart"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <span class="vl d-flex align-items-center justify-content-center w-10"><i
-                              class="icon ion-ios-arrow-down ml-3"></i></span>
                         </div>
-                      </a>
-
-                      <div class="collapse" id="stocks">
-                        <table class="table mt-2" id="">
-                          <thead class="text-center">
-                            <tr>
-                              <th>Token</th>
-                              <th>Quantidade</th>
-                              <th>Valor em CBRL</th>
-                              <th>24h</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody class="text-center">
-                            <tr data-toggle="collapse" href="#token-imb" role="button" aria-expanded="false"
-                              aria-controls="token-imb">
-                              <td><img class="symbol" src="assets/img/icon/2.png" alt="symbol"><span
-                                  class="theme-color">IMB</span></td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
-                              </td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
-                              </td>
-                              <td class="text-success">1,04%</td>
-                              <td><i class="icon ion-ios-arrow-down"></i></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="collapse border-top" id="token-imb">
-                        <div class="row justify-content-center mb-4">
-                          <div class="col-10 mb-3">
-                            <div>
-                              <span class="d-block ml-2 mt-4">Token</span>
-                              <span class="theme-color ml-2">IMB</span>
+                        <div class="card">
+                          <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="w-75">
+                                <div class="pie animate no-round" id="rv-chart">0%</div>
+                                <span class="font-weight-bold font-card fs-r">Renda Variável</span>
+                              </div>
+                              <div class="vl font-weight-bold w-50">
+                                <span class="d-block ml-4 fs-r">Saldo</span>
+                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                              </div>
+                              <span class="vl d-flex align-items-center justify-content-center w-10"><i
+                                  class="icon ion-ios-arrow-down ml-3"></i></span>
                             </div>
                           </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                              <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
-                              <span class="ml-2 mb-2">Ver mais detalhes</span>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#portfolio-accordion">
+                            <div class="card-body">
+                              <table class="table mt-2" id="">
+                                <thead class="text-center">
+                                  <tr>
+                                    <th>Token</th>
+                                    <th>Quantidade</th>
+                                    <th>Valor em CBRL</th>
+                                    <th>24h</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-loc" role="button" aria-expanded="false"
+                                    aria-controls="token-loc">
+                                    <td><img class="symbol" src="assets/img/icon/3.png" alt="symbol"><span
+                                        class="theme-color">LOC</span></td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">501,9</span>
+                                    </td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">231,06</span>
+                                    </td>
+                                    <td class="text-success">1,04%</td>
+                                    <td><i class="icon ion-ios-arrow-down"></i></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="collapse border-top" id="token-loc">
+                                <div class="row justify-content-center mb-4">
+                                  <div class="col-10 mb-3">
+                                    <div>
+                                      <span class="d-block ml-2 mt-4">Token</span>
+                                      <span class="theme-color ml-2">LOC</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                        Posição</span>
+                                      <span class="ml-2 mb-2">Ver mais detalhes</span>
+                                    </div>
+                                    <table class="table table-responsive mt-2">
+                                      <thead class="text-center">
+                                        <tr>
+                                          <th>Rendimento</th>
+                                          <th>Projetado</th>
+                                          <th>Negociado do dia</th>
+                                          <th>Em garantia</th>
+                                          <th>Liquidação de termo</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="text-center">
+                                        <tr>
+                                          <td><span class="balance-hidden">****</span><span class="balance-visible">R$
+                                              160,00</span></td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-around my-5">
+                                      <button
+                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                                      <button
+                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 font-weight-bold">
+                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                    </div>
+                                    <div class="lineChartdiv" id="loc-lineChart"></div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <table class="table table-responsive mt-2">
-                              <thead class="text-center">
-                                <tr>
-                                  <th>Rendimento</th>
-                                  <th>Projetado</th>
-                                  <th>Negociado do dia</th>
-                                  <th>Em garantia</th>
-                                  <th>Liquidação de termo</th>
-                                </tr>
-                              </thead>
-                              <tbody class="text-center">
-                                <tr data-toggle="collapse" href="#token-imb" role="button" aria-expanded="false"
-                                  aria-controls="token-imb">
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">R$
-                                      160,00</span></td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="d-flex justify-content-around my-5">
-                              <button
-                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button
-                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
-                            </div>
-                          </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 font-weight-bold">
-                              <h5 class="ml-2 mb-2">Evolução do ativo</h5>
-                            </div>
-                            <div class="lineChartdiv" id="imb-lineChart"></div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 mt-2">
-                      <a class="card card-header text-dark border-0" data-toggle="collapse" href="#renda-variavel"
-                        role="button" aria-expanded="false" aria-controls="renda-variavel">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="w-75">
-                            <div class="pie animate no-round" id="rv-chart">0%</div>
-                            <span class="font-weight-bold font-card fs-r">Renda Variável</span>
-                          </div>
-                          <div class="vl font-weight-bold w-50">
-                            <span class="d-block ml-4 fs-r">Saldo</span>
-                            <span class="ml-4 fs-r">R$ 6.0056,00</span>
-                          </div>
-                          <span class="vl d-flex align-items-center justify-content-center w-10"><i
-                              class="icon ion-ios-arrow-down ml-3"></i></span>
-                        </div>
-                      </a>
-
-                      <div class="collapse" id="renda-variavel">
-                        <table class="table mt-2" id="">
-                          <thead class="text-center">
-                            <tr>
-                              <th>Token</th>
-                              <th>Quantidade</th>
-                              <th>Valor em CBRL</th>
-                              <th>24h</th>
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody class="text-center">
-                            <tr data-toggle="collapse" href="#token-loc" role="button" aria-expanded="false"
-                              aria-controls="token-loc">
-                              <td><img class="symbol" src="assets/img/icon/3.png" alt="symbol"><span
-                                  class="theme-color">LOC</span></td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
-                              </td>
-                              <td><span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
-                              </td>
-                              <td class="text-success">1,04%</td>
-                              <td><i class="icon ion-ios-arrow-down"></i></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="collapse border-top" id="token-loc">
-                        <div class="row justify-content-center mb-4">
-                          <div class="col-10 mb-3">
-                            <div>
-                              <span class="d-block ml-2 mt-4">Token</span>
-                              <span class="theme-color ml-2">LOC</span>
+                        <div class="card">
+                          <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour" id="headingFour">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="w-75">
+                                <div class="pie animate no-round" id="ac-chart">0%</div>
+                                <span class="font-weight-bold font-card fs-r">Ações</span>
+                              </div>
+                              <div class="vl font-weight-bold w-50">
+                                <span class="d-block ml-4 fs-r">Saldo</span>
+                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                              </div>
+                              <span class="vl d-flex align-items-center justify-content-center w-10"><i
+                                  class="icon ion-ios-arrow-down ml-3"></i></span>
                             </div>
                           </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                              <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
-                              <span class="ml-2 mb-2">Ver mais detalhes</span>
+                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#portfolio-accordion">
+                            <div class="card-body">
+                              <table class="table mt-2" id="">
+                                <thead class="text-center">
+                                  <tr>
+                                    <th>Token</th>
+                                    <th>Quantidade</th>
+                                    <th>Valor em CBRL</th>
+                                    <th>24h</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-imb" role="button" aria-expanded="false"
+                                    aria-controls="token-imb">
+                                    <td><img class="symbol" src="assets/img/icon/2.png" alt="symbol"><span
+                                        class="theme-color">IMB</span></td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">501,9</span>
+                                    </td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">231,06</span>
+                                    </td>
+                                    <td class="text-success">1,04%</td>
+                                    <td><i class="icon ion-ios-arrow-down"></i></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="collapse border-top" id="token-imb">
+                                <div class="row justify-content-center mb-4">
+                                  <div class="col-10 mb-3">
+                                    <div>
+                                      <span class="d-block ml-2 mt-4">Token</span>
+                                      <span class="theme-color ml-2">IMB</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                        Posição</span>
+                                      <span class="ml-2 mb-2">Ver mais detalhes</span>
+                                    </div>
+                                    <table class="table table-responsive mt-2">
+                                      <thead class="text-center">
+                                        <tr>
+                                          <th>Rendimento</th>
+                                          <th>Projetado</th>
+                                          <th>Negociado do dia</th>
+                                          <th>Em garantia</th>
+                                          <th>Liquidação de termo</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="text-center">
+                                        <tr>
+                                          <td><span class="balance-hidden">****</span><span class="balance-visible">R$
+                                              160,00</span></td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-around my-5">
+                                      <button
+                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
+                                      <button
+                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-0 col-lg-1"></div>
+                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                    <div class="my-3 font-weight-bold">
+                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                    </div>
+                                    <div class="lineChartdiv" id="imb-lineChart"></div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <table class="table table-responsive mt-2">
-                              <thead class="text-center">
-                                <tr>
-                                  <th>Rendimento</th>
-                                  <th>Projetado</th>
-                                  <th>Negociado do dia</th>
-                                  <th>Em garantia</th>
-                                  <th>Liquidação de termo</th>
-                                </tr>
-                              </thead>
-                              <tbody class="text-center">
-                                <tr data-toggle="collapse" href="#token-loc" role="button" aria-expanded="false"
-                                  aria-controls="token-loc">
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">R$
-                                      160,00</span></td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                  <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <div class="d-flex justify-content-around my-5">
-                              <button
-                                class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                              <button
-                                class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
-                            </div>
-                          </div>
-                          <div class="col-0 col-lg-1"></div>
-                          <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                            <div class="my-3 font-weight-bold">
-                              <h5 class="ml-2 mb-2">Evolução do ativo</h5>
-                            </div>
-                            <div class="lineChartdiv" id="loc-lineChart"></div>
                           </div>
                         </div>
                       </div>
@@ -922,28 +950,28 @@
                         </div>
                       </div>
 
-                      <div class="accordion" id="accordionExample">
+                      <div class="accordion" id="wallet-accordion">
                         <div class="card">
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseOne"
-                          aria-expanded="false" aria-controls="collapseOne" id="headingOne">
-                          <div class="row justify-content-between text-center">
-                            <div class="col-2">
-                              <img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
-                                class="theme-color">FTR</span>
+                            aria-expanded="false" aria-controls="collapseOne" id="headingOne">
+                            <div class="row justify-content-between text-center">
+                              <div class="col-2">
+                                <img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
+                                  class="theme-color">FTR</span>
+                              </div>
+                              <div class="col-2">
+                                <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
+                              </div>
+                              <div class="col-2">
+                                <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
+                              </div>
+                              <div class="col-2">
+                                <span class="text-success">1,04%</span>
+                              </div>
                             </div>
-                            <div class="col-2">
-                              <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
-                            </div>
-                            <div class="col-2">
-                              <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
-                            </div>
-                            <div class="col-2">
-                              <span class="text-success">1,04%</span>
-                            </div>
-                          </div>
                           </div>
                           <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
+                            data-parent="#wallet-accordion">
                             <div class="card-body">
                               <div class="row justify-content-center mb-4">
                                 <div class="col-10 mb-3">
@@ -955,7 +983,8 @@
                                 <div class="col-0 col-lg-1"></div>
                                 <div class="col-11 col-lg-5 shadow mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                      Posição</span>
                                     <span class="ml-2 mb-2">Ver mais detalhes</span>
                                   </div>
                                   <table class="table table-responsive mt-2">
@@ -972,13 +1001,17 @@
                                       <tr>
                                         <td><span class="balance-hidden">****</span><span class="balance-visible">R$
                                             160,00</span></td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -1004,25 +1037,25 @@
 
                         <div class="card">
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseTwo"
-                          aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
-                          <div class="row justify-content-between text-center">
-                            <div class="col-2">
-                              <img class="symbol" src="assets/img/icon/1.png" alt="symbol"><span
-                                class="theme-color">JUD</span>
+                            aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
+                            <div class="row justify-content-between text-center">
+                              <div class="col-2">
+                                <img class="symbol" src="assets/img/icon/1.png" alt="symbol"><span
+                                  class="theme-color">JUD</span>
+                              </div>
+                              <div class="col-2">
+                                <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
+                              </div>
+                              <div class="col-2">
+                                <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
+                              </div>
+                              <div class="col-2">
+                                <span class="text-success">1,04%</span>
+                              </div>
                             </div>
-                            <div class="col-2">
-                              <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
-                            </div>
-                            <div class="col-2">
-                              <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
-                            </div>
-                            <div class="col-2">
-                              <span class="text-success">1,04%</span>
-                            </div>
-                          </div>
                           </div>
                           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
+                            data-parent="#wallet-accordion">
                             <div class="card-body">
                               <div class="row justify-content-center mb-4">
                                 <div class="col-10 mb-3">
@@ -1034,7 +1067,8 @@
                                 <div class="col-0 col-lg-1"></div>
                                 <div class="col-11 col-lg-5 shadow mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                      Posição</span>
                                     <span class="ml-2 mb-2">Ver mais detalhes</span>
                                   </div>
                                   <table class="table table-responsive mt-2">
@@ -1051,13 +1085,17 @@
                                       <tr>
                                         <td><span class="balance-hidden">****</span><span class="balance-visible">R$
                                             160,00</span></td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -1083,8 +1121,8 @@
 
                         <div class="card">
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseThree"
-                          aria-expanded="false" aria-controls="collapseThree" id="headingThree">
-                          <div class="row justify-content-between text-center">
+                            aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+                            <div class="row justify-content-between text-center">
                               <div class="col-2">
                                 <img class="symbol" src="assets/img/icon/2.png" alt="symbol"><span
                                   class="theme-color">IMB</span>
@@ -1101,7 +1139,7 @@
                             </div>
                           </div>
                           <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
+                            data-parent="#wallet-accordion">
                             <div class="card-body">
                               <div class="row justify-content-center mb-4">
                                 <div class="col-10 mb-3">
@@ -1113,7 +1151,8 @@
                                 <div class="col-0 col-lg-1"></div>
                                 <div class="col-11 col-lg-5 shadow mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                      Posição</span>
                                     <span class="ml-2 mb-2">Ver mais detalhes</span>
                                   </div>
                                   <table class="table table-responsive mt-2">
@@ -1130,13 +1169,17 @@
                                       <tr>
                                         <td><span class="balance-hidden">****</span><span class="balance-visible">R$
                                             160,00</span></td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -1181,7 +1224,7 @@
                           </div>
 
                           <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                            data-parent="#accordionExample">
+                            data-parent="#wallet-accordion">
                             <div class="card-body">
                               <div class="row justify-content-center mb-4">
                                 <div class="col-10 mb-3">
@@ -1193,7 +1236,8 @@
                                 <div class="col-0 col-lg-1"></div>
                                 <div class="col-11 col-lg-5 shadow mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha Posição</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                      Posição</span>
                                     <span class="ml-2 mb-2">Ver mais detalhes</span>
                                   </div>
                                   <table class="table table-responsive mt-2">
@@ -1210,13 +1254,17 @@
                                       <tr>
                                         <td><span class="balance-hidden">****</span><span class="balance-visible">R$
                                             160,00</span></td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
-                                        <td><span class="balance-hidden">****</span><span class="balance-visible">0</span>
+                                        <td><span class="balance-hidden">****</span><span
+                                            class="balance-visible">0</span>
                                         </td>
                                       </tr>
                                     </tbody>
