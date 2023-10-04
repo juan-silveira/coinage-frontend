@@ -49,16 +49,16 @@ handleRadialChart("rv-chart", 2.7, "green", 50, 14);
 
 window.addEventListener('load', () => {
     const portfolio = document.querySelector('#portfolio');
-    const wallet = document.querySelector('#wallet');
+    const rentabilidade = document.querySelector('#rentabilidade-table');
     portfolio.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
-    wallet.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
+    rentabilidade.classList.toggle('table-responsive', window.matchMedia('(max-width:650px)').matches);
 });
 
 window.addEventListener('resize', () => {
     const portfolio = document.querySelector('#portfolio');
-    const wallet = document.querySelector('#wallet');
+    const rentabilidade = document.querySelector('#rentabilidade-table');
     portfolio.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
-    wallet.classList.toggle('table-responsive', window.matchMedia('(max-width:500px)').matches);
+    rentabilidade.classList.toggle('table-responsive', window.matchMedia('(max-width:650px)').matches);
 });
 
 document.getElementById("visibility-button").addEventListener("click", handleVisibility);

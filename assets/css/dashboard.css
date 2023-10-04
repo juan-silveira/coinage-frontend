@@ -103,22 +103,46 @@
     font-size: 20px;
 }
 
-#performance-chart{
+#performance-chart {
     min-height: 300px;
 }
 
-.navbar{
+.navbar {
     max-width: 1150px;
     margin: 0 auto;
 }
 
-.cursor{
+.cursor {
     cursor: pointer;
 }
 
-.cursor:hover{
+.cursor:hover {
     background-color: #eee;
 }
+
+#performance-chart {
+    margin-top: -20px;
+}
+
+.rounded-badge {
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+}
+
+.ml-33{
+    margin-left: 33px;
+}
+
+.ml-63{
+    margin-left: 63px;
+}
+
 /* Controle do gráfico radial nos collapses */
 
 @property --p {
@@ -178,11 +202,11 @@
     content: none;
 }
 
-#total-invested-chart{
+#total-invested-chart {
     position: relative;
 }
 
-.innerPieText{
+.innerPieText {
     position: absolute;
     transform: translateY(50px);
 }
@@ -205,7 +229,9 @@
     .hidden {
         display: none;
     }
-    .radio-title, .fs-r {
+
+    .radio-title,
+    .fs-r {
         font-size: 3vw;
     }
 }

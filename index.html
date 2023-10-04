@@ -327,66 +327,71 @@
                 </div>
               </div>
             </div>
-
-            <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                <form class="d-flex mt-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="radioMercado" value="option1"
-                      checked>
-                    <label class="form-check-label" for="radioMercado">
-                      <p class="h5 radio-title">Posição a mercado (D-1)</p>
-                    </label>
-                  </div>
-                  <div class="form-check ml-4">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="radioCurva" value="option2">
-                    <label class="form-check-label" for="radioCurva">
-                      <p class="h5 radio-title">Posição na taxa de compra ("na curva")</p>
-                    </label>
-                  </div>
-                </form>
-                <div class="row justify-content-around align-items-center">
-                  <div class="col-12 col-sm-3 col-lg-2 d-flex justify-content-center">
-                    <div class="" id="dashboard-chart">0%</div>
-                    <div class="text-center innerPieText" id="">
-                      <span class="d-block fs-20 font-weight-bold">55.47%</span>
-                      <span class="">Total Investido</span>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-9 col-lg-10">
-                    <div class="row mt-3">
-                      <div class="col-xl-12 mb-3">
-                        <div class="row">
-                          <div class="col-md-5 text-center">
-                            <span class="d-block">Ivan Carlos, este é o seu patrimônio</span>
-                            <span class="fs-20 d-block font-weight-bold">R$ 14.620,67</span>
-                            <span>Atualizado em 29/09/2023, 09:47</span>
-                          </div>
-                          <div class="col-md-7 d-flex vl-60 justify-content-between">
-                            <div class="ml-4">
-                              <p>Saldo disponível</p>
-                              <p class="h6"> R$ 6.510,62</p>
-                            </div>
-                            <div class="ml-4">
-                              <p>Total investido</p>
-                              <p class="h6"> R$ 8.110,05</p>
-                            </div>
-                            <div class="ml-4">
-                              <p>Saldo projetado</p>
-                              <p class="h6"> R$ 6.510,62</p>
-                            </div>
-                          </div>
+            <form class="d-flex mt-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radioMercado" value="option1"
+                  checked>
+                <label class="form-check-label" for="radioMercado">
+                  <p class="h5 radio-title">Posição a mercado (D-1)</p>
+                </label>
+              </div>
+              <div class="form-check ml-4">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radioCurva" value="option2">
+                <label class="form-check-label" for="radioCurva">
+                  <p class="h5 radio-title">Posição na taxa de compra ("na curva")</p>
+                </label>
+              </div>
+            </form>
+            <div class="row justify-content-around align-items-center">
+              <div class="col-12 col-sm-3 col-lg-2 d-flex justify-content-center">
+                <div class="" id="dashboard-chart">0%</div>
+                <div class="text-center innerPieText" id="">
+                  <span class="d-block fs-20 font-weight-bold">55.47%</span>
+                  <span class="">Total Investido</span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-9 col-lg-10">
+                <div class="row mt-3">
+                  <div class="col-xl-12 mb-3">
+                    <div class="row">
+                      <div class="col-md-5 text-center">
+                        <span class="d-block">Ivan Carlos, este é o seu patrimônio</span>
+                        <span class="fs-20 d-block font-weight-bold"><span class="balance-hidden">****</span><span
+                            class="balance-visible">R$ 14.620,67</span></span>
+                        <span>Atualizado em 29/09/2023, 09:47</span>
+                      </div>
+                      <div class="col-md-7 d-flex vl-60 justify-content-between">
+                        <div class="ml-4">
+                          <p>Saldo disponível</p>
+                          <p class="h6"><span class="balance-hidden">****</span><span class="balance-visible">R$
+                              6.510,62</span></p>
                         </div>
-                        <div class="border-top mt-3">
-                          <a href="">
-                            <p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i
-                                class="icon ion-ios-arrow-forward text-warning"></i></p>
-                          </a>
+                        <div class="ml-4">
+                          <p>Total investido</p>
+                          <p class="h6"><span class="balance-hidden">****</span><span class="balance-visible">R$
+                              8.110,05</span></p>
+                        </div>
+                        <div class="ml-4">
+                          <p>Saldo projetado</p>
+                          <p class="h6"><span class="balance-hidden">****</span><span class="balance-visible">R$
+                              6.510,62</span></p>
                         </div>
                       </div>
                     </div>
+                    <div class="border-top mt-3">
+                      <a href="">
+                        <p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i
+                            class="icon ion-ios-arrow-forward text-warning"></i></p>
+                      </a>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <div class="row justify-content-around align-items-center">
                   <div class="col-12">
                     <p class="h5">
                       Performance da sua carteira e recomendado para você
@@ -402,15 +407,18 @@
                     </p>
                     <div class="row">
                       <div class="col-md-9">
-                        <div id="performance-chart"></div>
+                        <span class="balance-hidden">****ATIVE A VISIBILIDADE DO SALDO PARA VER O GRÁFICO DE
+                          PERFORMANCE****</span><span class="balance-visible">
+                          <div id="performance-chart"></div>
+                        </span>
                       </div>
                       <div class="col-md-3">
-                        <div class="mt-2">
+                        <div class="">
                           <span class="font-weight-bold d-block">
                             Rendimento
                           </span>
                           <span class="text-success">
-                            R$ 2.336,52
+                            <span class="balance-hidden">****</span><span class="balance-visible">R$ 2.336,52</span>
                           </span>
                         </div>
                         <div class="mt-2">
@@ -418,7 +426,7 @@
                             Rentabilidade
                           </span>
                           <span class="text-success">
-                            19.17%
+                            <span class="balance-hidden">****</span><span class="balance-visible">19.17%</span>
                           </span>
                         </div>
                         <div class="mt-2">
@@ -426,64 +434,87 @@
                             Rentabilidade CDI
                           </span>
                           <span class="text-success">
-                            145.50%
+                            <span class="balance-hidden">****</span><span class="balance-visible">145.50%</span>
                           </span>
                         </div>
                         <div class="mt-5">
-                          <p class="h5">
+                          <p class="h6">
                             Visualizar Evolução Completa <i class="icon ion-ios-arrow-forward text-warning"></i>
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="col-12 mt-3 py-3 shadow">
+                    <div class="">
+                      <span class="rounded-badge bg-primary"><i class="icon ion-ios-stats mt-1"></i></span>
+                      <span class="h5">Rentabilidade comparada</span>
+                      <span class="d-block ml-33">Acompanhe as distribuições dos proventos gerados pelos seus
+                        investimentos</span>
+                    </div>
+
+                    <table class="table table-hover mt-3" id="rentabilidade-table">
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">No mês</th>
+                          <th scope="col">Semestre</th>
+                          <th scope="col">No ano</th>
+                          <th scope="col">12 meses</th>
+                          <th scope="col">Desde o início</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Sua carteira</th>
+                          <td>1.99%</td>
+                          <td>2.37%</td>
+                          <td>18.12%</td>
+                          <td>19.17%</td>
+                          <td>40.98%</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">CDI%</th>
+                          <td>0.74%</td>
+                          <td>2.98%</td>
+                          <td>9.67%</td>
+                          <td>13.18%</td>
+                          <td>21.04%</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">IPC-A</th>
+                          <td>0.24%</td>
+                          <td>0.59%</td>
+                          <td>3.48%</td>
+                          <td>5.06%</td>
+                          <td>7.16%</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">IBOVESPA</th>
+                          <td>0.23%</td>
+                          <td>-1.76%</td>
+                          <td>5.72%</td>
+                          <td>3.64%</td>
+                          <td>3.84%</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="">Rentabilidade real <i class="icon ion-ios-information-circle-outline"
+                              data-toggle="tooltip" data-placement="top"
+                              title="Rentabilidade já considerando a inflação"></i></th>
+                          <td>1.74%</td>
+                          <td>1.77%</td>
+                          <td>14.15%</td>
+                          <td>13.43%</td>
+                          <td>31.56%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 
               <div class="tab-pane fade" id="dashboard-portfolio" role="tabpanel"
                 aria-labelledby="dashboard-portfolio-tab">
-                <div class="row justify-content-around align-items-center mt-3">
-                  <div class="col-12 col-sm-3 col-lg-2 d-flex justify-content-center">
-                    <div class="" id="total-invested-chart">0%</div>
-                    <div class="text-center innerPieText" id="">
-                      <span class="d-block fs-20 font-weight-bold">55.47%</span>
-                      <span class="">Total Investido</span>
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-9 col-lg-10">
-                    <div class="row mt-3">
-                      <div class="col-xl-12 mb-3">
-                        <div class="row">
-                          <div class="col-md-5 text-center">
-                            <span class="d-block">Ivan Carlos, este é o seu patrimônio</span>
-                            <span class="fs-20 d-block font-weight-bold">R$ 14.620,67</span>
-                            <span>Atualizado em 29/09/2023, 09:47</span>
-                          </div>
-                          <div class="col-md-7 d-flex vl-60 justify-content-between">
-                            <div class="ml-4">
-                              <p>Saldo disponível</p>
-                              <p class="h6"> R$ 6.510,62</p>
-                            </div>
-                            <div class="ml-4">
-                              <p>Total investido</p>
-                              <p class="h6"> R$ 8.110,05</p>
-                            </div>
-                            <div class="ml-4">
-                              <p>Saldo projetado</p>
-                              <p class="h6"> R$ 6.510,62</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="border-top mt-3">
-                          <a href="">
-                            <p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i
-                                class="icon ion-ios-arrow-forward text-warning"></i></p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="dashboard-portfolio shadow">
                   <div class="row">
                     <div class="col-12">
@@ -498,7 +529,10 @@
                               </div>
                               <div class="vl font-weight-bold w-50">
                                 <span class="d-block ml-4 fs-r">Saldo</span>
-                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                <span class="balance-hidden ml-4 fs-r">****</span>
+                                <span class="balance-visible">
+                                  <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                </span>
                               </div>
                               <span class="vl d-flex align-items-center justify-content-center w-10"><i
                                   class="icon ion-ios-arrow-down ml-3"></i></span>
@@ -519,8 +553,8 @@
                                   </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                  <tr class="cursor" data-toggle="collapse" href="#token-ftr" role="button" aria-expanded="false"
-                                    aria-controls="token-ftr">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-ftr" role="button"
+                                    aria-expanded="false" aria-controls="token-ftr">
                                     <td><img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
                                         class="theme-color">FTR</span></td>
                                     <td><span class="balance-hidden">****</span><span
@@ -542,8 +576,7 @@
                                       <span class="theme-color ml-2">FTR</span>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                       <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                         Posição</span>
@@ -578,19 +611,16 @@
                                         </tr>
                                       </tbody>
                                     </table>
-                                    <div class="d-flex justify-content-around my-5">
-                                      <button
-                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                      <button
-                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    <div class="d-flex justify-content-center my-5">
+                                      <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                      <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                    <div class="my-3 font-weight-bold">
-                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                     </div>
-                                    <div class="lineChartdiv" id="ftr-lineChart"></div>
+                                    <div class="lineChartdiv" id="ftr-divergentChart"></div>
                                   </div>
                                 </div>
                               </div>
@@ -607,7 +637,10 @@
                               </div>
                               <div class="vl font-weight-bold w-50">
                                 <span class="d-block ml-4 fs-r">Saldo</span>
-                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                <span class="balance-hidden ml-4 fs-r">****</span>
+                                <span class="balance-visible">
+                                  <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                </span>
                               </div>
                               <span class="vl d-flex align-items-center justify-content-center w-10"><i
                                   class="icon ion-ios-arrow-down ml-3"></i></span>
@@ -627,8 +660,8 @@
                                   </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                  <tr class="cursor" data-toggle="collapse" href="#token-jud" role="button" aria-expanded="false"
-                                    aria-controls="token-jud">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-jud" role="button"
+                                    aria-expanded="false" aria-controls="token-jud">
                                     <td><img class="symbol" src="assets/img/icon/1.png" alt="symbol"><span
                                         class="theme-color">JUD</span></td>
                                     <td><span class="balance-hidden">****</span><span
@@ -650,8 +683,7 @@
                                       <span class="theme-color ml-2">JUD</span>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                       <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                         Posição</span>
@@ -686,17 +718,14 @@
                                         </tr>
                                       </tbody>
                                     </table>
-                                    <div class="d-flex justify-content-around my-5">
-                                      <button
-                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                      <button
-                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    <div class="d-flex justify-content-center my-5">
+                                      <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                      <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                    <div class="my-3 font-weight-bold">
-                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="jud-lineChart"></div>
                                   </div>
@@ -715,7 +744,10 @@
                               </div>
                               <div class="vl font-weight-bold w-50">
                                 <span class="d-block ml-4 fs-r">Saldo</span>
-                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                <span class="balance-hidden ml-4 fs-r">****</span>
+                                <span class="balance-visible">
+                                  <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                </span>
                               </div>
                               <span class="vl d-flex align-items-center justify-content-center w-10"><i
                                   class="icon ion-ios-arrow-down ml-3"></i></span>
@@ -735,8 +767,8 @@
                                   </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                  <tr class="cursor" data-toggle="collapse" href="#token-loc" role="button" aria-expanded="false"
-                                    aria-controls="token-loc">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-loc" role="button"
+                                    aria-expanded="false" aria-controls="token-loc">
                                     <td><img class="symbol" src="assets/img/icon/3.png" alt="symbol"><span
                                         class="theme-color">LOC</span></td>
                                     <td><span class="balance-hidden">****</span><span
@@ -758,8 +790,7 @@
                                       <span class="theme-color ml-2">LOC</span>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                       <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                         Posição</span>
@@ -794,17 +825,14 @@
                                         </tr>
                                       </tbody>
                                     </table>
-                                    <div class="d-flex justify-content-around my-5">
-                                      <button
-                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                      <button
-                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    <div class="d-flex justify-content-center my-5">
+                                      <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                      <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                    <div class="my-3 font-weight-bold">
-                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="loc-lineChart"></div>
                                   </div>
@@ -823,7 +851,10 @@
                               </div>
                               <div class="vl font-weight-bold w-50">
                                 <span class="d-block ml-4 fs-r">Saldo</span>
-                                <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                <span class="balance-hidden ml-4 fs-r">****</span>
+                                <span class="balance-visible">
+                                  <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                </span>
                               </div>
                               <span class="vl d-flex align-items-center justify-content-center w-10"><i
                                   class="icon ion-ios-arrow-down ml-3"></i></span>
@@ -843,8 +874,8 @@
                                   </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                  <tr class="cursor" data-toggle="collapse" href="#token-imb" role="button" aria-expanded="false"
-                                    aria-controls="token-imb">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-imb" role="button"
+                                    aria-expanded="false" aria-controls="token-imb">
                                     <td><img class="symbol" src="assets/img/icon/2.png" alt="symbol"><span
                                         class="theme-color">IMB</span></td>
                                     <td><span class="balance-hidden">****</span><span
@@ -866,8 +897,7 @@
                                       <span class="theme-color ml-2">IMB</span>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                       <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                         Posição</span>
@@ -902,19 +932,131 @@
                                         </tr>
                                       </tbody>
                                     </table>
-                                    <div class="d-flex justify-content-around my-5">
-                                      <button
-                                        class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                      <button
-                                        class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                    <div class="d-flex justify-content-center my-5">
+                                      <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                      <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                     </div>
                                   </div>
-                                  <div class="col-0 col-lg-1"></div>
-                                  <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                    <div class="my-3 font-weight-bold">
-                                      <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="imb-lineChart"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shadow mt-3">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="accordion" id="proventos-accordion">
+                        <div class="card">
+                          <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseProventos"
+                            aria-expanded="true" aria-controls="collapseProventos" id="headingProventos">
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="w-75">
+                                <span class="font-weight-bold font-card fs-r ml-63">Proventos</span>
+                              </div>
+                              <div class="vl font-weight-bold w-50">
+                                <span class="d-block ml-4 fs-r">Saldo</span>
+                                <span class="balance-hidden ml-4 fs-r">****</span>
+                                <span class="balance-visible">
+                                  <span class="ml-4 fs-r">R$ 6.0056,00</span>
+                                </span>
+                              </div>
+                              <span class="vl d-flex align-items-center justify-content-center w-10"><i
+                                  class="icon ion-ios-arrow-down ml-3"></i></span>
+                            </div>
+                          </div>
+
+                          <div id="collapseProventos" class="collapse" aria-labelledby="headingProventos"
+                            data-parent="#proventos-accordion">
+                            <div class="card-body">
+                              <table class="table mt-2" id="portfolio">
+                                <thead class="text-center">
+                                  <tr>
+                                    <th>Token</th>
+                                    <th>Quantidade</th>
+                                    <th>Valor em CBRL</th>
+                                    <th>24h</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-ftr" role="button"
+                                    aria-expanded="false" aria-controls="token-ftr">
+                                    <td><img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
+                                        class="theme-color">FTR</span></td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">501,9</span>
+                                    </td>
+                                    <td><span class="balance-hidden">****</span><span
+                                        class="balance-visible">231,06</span>
+                                    </td>
+                                    <td class="text-success">1,04%</td>
+                                    <td><i class="icon ion-ios-arrow-down"></i></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="collapse border-top" id="token-ftr">
+                                <div class="row justify-content-center mb-4">
+                                  <div class="col-10 mb-3">
+                                    <div>
+                                      <span class="d-block ml-2 mt-4">Token</span>
+                                      <span class="theme-color ml-2">FTR</span>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
+                                        Posição</span>
+                                      <span class="ml-2 mb-2">Ver mais detalhes</span>
+                                    </div>
+                                    <table class="table table-responsive mt-2">
+                                      <thead class="text-center">
+                                        <tr>
+                                          <th>Rendimento</th>
+                                          <th>Projetado</th>
+                                          <th>Negociado do dia</th>
+                                          <th>Em garantia</th>
+                                          <th>Liquidação de termo</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="text-center">
+                                        <tr>
+                                          <td><span class="balance-hidden">****</span><span class="balance-visible">R$
+                                              160,00</span></td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                          <td><span class="balance-hidden">****</span><span
+                                              class="balance-visible">0</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-center my-5">
+                                      <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                      <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-lg-6 mt-4 mx-0">
+                                    <div class="my-3 border-bottom d-flex font-weight-bold">
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                    </div>
+                                    <div class="lineChartdiv" id="loc-lineChart"></div>
                                   </div>
                                 </div>
                               </div>
@@ -928,22 +1070,22 @@
               </div>
 
               <div class="tab-pane fade" id="dashboard-wallet" role="tabpanel" aria-labelledby="dashboard-wallet-tab">
-                <div class="dashboard-wallet shadow mt-3">
+                <div class="dashboard-wallet mt-3">
                   <div class="row">
                     <div class="col-12">
                       <div class="card">
                         <div class="card-header">
                           <div class="row justify-content-between text-center">
-                            <div class="col-2">
+                            <div class="col-3">
                               Token
                             </div>
-                            <div class="col-2">
+                            <div class="col-3">
                               Quantidade
                             </div>
-                            <div class="col-2">
+                            <div class="col-3">
                               Valor em CBRL
                             </div>
-                            <div class="col-2">
+                            <div class="col-3">
                               24h
                             </div>
                           </div>
@@ -955,17 +1097,17 @@
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseOne"
                             aria-expanded="false" aria-controls="collapseOne" id="headingOne">
                             <div class="row justify-content-between text-center">
-                              <div class="col-2">
+                              <div class="col-3">
                                 <img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
                                   class="theme-color">FTR</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="text-success">1,04%</span>
                               </div>
                             </div>
@@ -980,8 +1122,7 @@
                                     <span class="theme-color ml-2">FTR</span>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                     <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                       Posição</span>
@@ -1016,17 +1157,14 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <div class="d-flex justify-content-around my-5">
-                                    <button
-                                      class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                    <button
-                                      class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                  <div class="d-flex justify-content-center my-5">
+                                    <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                    <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                  <div class="my-3 font-weight-bold">
-                                    <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
+                                  <div class="my-3 border-bottom d-flex font-weight-bold">
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="ftr-wallet-lineChart"></div>
                                 </div>
@@ -1039,17 +1177,17 @@
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseTwo"
                             aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
                             <div class="row justify-content-between text-center">
-                              <div class="col-2">
+                              <div class="col-3">
                                 <img class="symbol" src="assets/img/icon/1.png" alt="symbol"><span
                                   class="theme-color">JUD</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="text-success">1,04%</span>
                               </div>
                             </div>
@@ -1064,8 +1202,7 @@
                                     <span class="theme-color ml-2">JUD</span>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                     <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                       Posição</span>
@@ -1100,17 +1237,14 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <div class="d-flex justify-content-around my-5">
-                                    <button
-                                      class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                    <button
-                                      class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                  <div class="d-flex justify-content-center my-5">
+                                    <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                    <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                  <div class="my-3 font-weight-bold">
-                                    <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
+                                  <div class="my-3 border-bottom d-flex font-weight-bold">
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="jud-wallet-lineChart"></div>
                                 </div>
@@ -1123,17 +1257,17 @@
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseThree"
                             aria-expanded="false" aria-controls="collapseThree" id="headingThree">
                             <div class="row justify-content-between text-center">
-                              <div class="col-2">
+                              <div class="col-3">
                                 <img class="symbol" src="assets/img/icon/2.png" alt="symbol"><span
                                   class="theme-color">IMB</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="text-success">1,04%</span>
                               </div>
                             </div>
@@ -1148,8 +1282,7 @@
                                     <span class="theme-color ml-2">IMB</span>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                     <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                       Posição</span>
@@ -1184,17 +1317,14 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <div class="d-flex justify-content-around my-5">
-                                    <button
-                                      class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                    <button
-                                      class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                  <div class="d-flex justify-content-center my-5">
+                                    <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                    <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                  <div class="my-3 font-weight-bold">
-                                    <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
+                                  <div class="my-3 border-bottom d-flex font-weight-bold">
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="imb-wallet-lineChart"></div>
                                 </div>
@@ -1207,17 +1337,17 @@
                           <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseFour"
                             aria-expanded="false" aria-controls="collapseFour" id="headingFour">
                             <div class="row justify-content-between text-center">
-                              <div class="col-2">
+                              <div class="col-3">
                                 <img class="symbol" src="assets/img/icon/3.png" alt="symbol"><span
                                   class="theme-color">LOC</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">501,9</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="balance-hidden">****</span><span class="balance-visible">231,06</span>
                               </div>
-                              <div class="col-2">
+                              <div class="col-3">
                                 <span class="text-success">1,04%</span>
                               </div>
                             </div>
@@ -1233,8 +1363,7 @@
                                     <span class="theme-color ml-2">LOC</span>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex justify-content-between font-weight-bold">
                                     <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Minha
                                       Posição</span>
@@ -1269,17 +1398,14 @@
                                       </tr>
                                     </tbody>
                                   </table>
-                                  <div class="d-flex justify-content-around my-5">
-                                    <button
-                                      class="btn btn-lg bg-success mx-2 text-white font-weight-bold w-100">Investir</button>
-                                    <button
-                                      class="btn btn-lg bg-danger mx-2 text-white font-weight-bold w-100">Liquidar</button>
+                                  <div class="d-flex justify-content-center my-5">
+                                    <button class="btn btn-outline-success mx-2 rounded-pill">Investir</button>
+                                    <button class="btn btn-outline-danger mx-2 rounded-pill">Resgatar</button>
                                   </div>
                                 </div>
-                                <div class="col-0 col-lg-1"></div>
-                                <div class="col-11 col-lg-5 shadow mt-4 mx-0">
-                                  <div class="my-3 font-weight-bold">
-                                    <h5 class="ml-2 mb-2">Evolução do ativo</h5>
+                                <div class="col-12 col-lg-6 mt-4 mx-0">
+                                  <div class="my-3 border-bottom d-flex font-weight-bold">
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="loc-wallet-lineChart"></div>
                                 </div>

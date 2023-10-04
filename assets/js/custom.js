@@ -777,6 +777,11 @@
     window.location = $(this).data('href');
   });
 
+  //enable tooltips
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
   // click to full screen
   function toggleFullscreen(elem) {
     elem = elem || document.documentElement;
