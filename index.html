@@ -238,15 +238,25 @@
               <div class="p-3">
                 <div class="row">
                   <div class="col-lg-8">
-                    <h5>Sua posição padrão está a mercado</h5>
-                    <p>Posição a mercado é uma estimativa de quanto os ativos valeriam caso fossem resgatados
+                    <h5 class="" id="market-card-title">Sua posição padrão está a mercado</h5>
+                    <h5 class="text-hidden" id="curve-card-title">Sua posição padrão está na taxa de compra</h5>
+                    <p class="" id="market-radio-text">Posição a mercado é uma estimativa de quanto os ativos valeriam
+                      caso fossem resgatados
                       antes
                       do
                       vencimento. Válido para Títulos Públicos, Debêntures, CRIs e CRAs. Os outros ativos são
                       precificados na taxa de compra. Caso queira alterar o seu padrão de visualização para
                       <b>Posição
-                        na taxa de compra ("na curva")</b> acesse: <a class="text-dark font-weight-bold" href=""
-                        id="change-radio">Mudar posição padrão <i
+                        na taxa de compra ("na curva")</b> acesse: <a class="text-dark font-weight-bold btn btn-light" href="#"
+                        id="market-radio-toggler">Mudar posição padrão <i
+                          class="icon ion-ios-arrow-forward text-warning"></i></a>
+                    </p>
+                    <p class="text-hidden" id="curve-radio-text">Posição
+                      na taxa de compra ("na curva") é um método de atualização dos ganhos em investimentos de renda
+                      fixa. Com ela, é possível identificar a rentabilidade, a longo e curto prazo, de uma aplicação.
+                      Caso queira alterar o seu padrão de visualização para
+                      <b>Posição a mercado (D-1)</b> acesse: <a class="text-dark font-weight-bold btn btn-light" href="#"
+                        id="curve-radio-toggler">Mudar posição padrão <i
                           class="icon ion-ios-arrow-forward text-warning"></i></a>
                     </p>
                   </div>
@@ -327,21 +337,18 @@
                 </div>
               </div>
             </div>
-            <form class="d-flex mt-3">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radioMercado" value="option1"
-                  checked>
-                <label class="form-check-label" for="radioMercado">
-                  <p class="h5 radio-title">Posição a mercado (D-1)</p>
-                </label>
+            <div class="d-flex justify-content-between mt-3">
+              <div class="d-flex">
+                <a href="#" type="button" id="market-radio-trigger"><i class="icon ion-ios-radio-button-on icon-badge"
+                    id="market-radio"></i></a>
+                <span class="h5 radio-title ml-1">Posição a mercado (D-1)</span>
               </div>
-              <div class="form-check ml-4">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radioCurva" value="option2">
-                <label class="form-check-label" for="radioCurva">
-                  <p class="h5 radio-title">Posição na taxa de compra ("na curva")</p>
-                </label>
+              <div class="d-flex">
+                <a href="#" type="button" id="curve-radio-trigger"><i class="icon ion-ios-radio-button-off icon-badge"
+                    id="curve-radio"></i></a>
+                <span class="h5 radio-title ml-1">Posição na taxa de compra ("na curva")</span>
               </div>
-            </form>
+            </div>
             <div class="row justify-content-around align-items-center">
               <div class="col-12 col-sm-3 col-lg-2 d-flex justify-content-center">
                 <div class="" id="dashboard-chart">0%</div>
@@ -354,7 +361,7 @@
                 <div class="row mt-3">
                   <div class="col-xl-12 mb-3">
                     <div class="row">
-                      <div class="col-md-5 text-center">
+                      <div class="col-md-5 text-center mb-3-md">
                         <span class="d-block">Ivan Carlos, este é o seu patrimônio</span>
                         <span class="fs-20 d-block font-weight-bold"><span class="balance-hidden">****</span><span
                             class="balance-visible">R$ 14.620,67</span></span>
@@ -380,7 +387,7 @@
                     </div>
                     <div class="border-top mt-3">
                       <a href="">
-                        <p class="text-dark h6 mt-3">Consulte o extrato completo da sua conta <i
+                        <p class="text-dark h6 mt-3 text-center">Consulte o extrato completo da sua conta <i
                             class="icon ion-ios-arrow-forward text-warning"></i></p>
                       </a>
                     </div>
@@ -391,124 +398,63 @@
 
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                <div class="row justify-content-around align-items-center">
-                  <div class="col-12">
-                    <p class="h5">
-                      Performance da sua carteira e recomendado para você
-                    </p>
-                    <p>
-                      Acompanhe a performance da sua carteira e também as nossas recomendações. Para visualizar mais
-                      detalhes, acessa a aba <b>Minha Carteira</b>.
-                    </p>
-                  </div>
-                  <div class="col-12 shadow">
-                    <p class="mt-3">
-                      Performance da sua carteira
-                    </p>
-                    <div class="row">
-                      <div class="col-md-9">
-                        <span class="balance-hidden">****ATIVE A VISIBILIDADE DO SALDO PARA VER O GRÁFICO DE
-                          PERFORMANCE****</span><span class="balance-visible">
-                          <div id="performance-chart"></div>
-                        </span>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="">
-                          <span class="font-weight-bold d-block">
-                            Rendimento
-                          </span>
-                          <span class="text-success">
-                            <span class="balance-hidden">****</span><span class="balance-visible">R$ 2.336,52</span>
+                <div class="dashboard shadow">
+                  <div class="row justify-content-around align-items-center px-3">
+                    <div class="col-12 mt-3">
+                      <p class="h5">
+                        Performance da sua carteira e recomendado para você
+                      </p>
+                      <p>
+                        Acompanhe a performance da sua carteira e também as nossas recomendações. Para visualizar mais
+                        detalhes, acessa a aba <b>Minha Carteira</b>.
+                      </p>
+                    </div>
+                    <div class="col-12 ">
+                      <p class="mt-3">
+                        Performance da sua carteira
+                      </p>
+                      <div class="row">
+                        <div class="col-md-9">
+                          <span class="balance-hidden">****ATIVE A VISIBILIDADE DO SALDO PARA VER O GRÁFICO DE
+                            PERFORMANCE****</span><span class="balance-visible">
+                            <div id="performance-chart"></div>
                           </span>
                         </div>
-                        <div class="mt-2">
-                          <span class="font-weight-bold d-block">
-                            Rentabilidade
-                          </span>
-                          <span class="text-success">
-                            <span class="balance-hidden">****</span><span class="balance-visible">19.17%</span>
-                          </span>
-                        </div>
-                        <div class="mt-2">
-                          <span class="font-weight-bold d-block">
-                            Rentabilidade CDI
-                          </span>
-                          <span class="text-success">
-                            <span class="balance-hidden">****</span><span class="balance-visible">145.50%</span>
-                          </span>
-                        </div>
-                        <div class="mt-5">
-                          <p class="h6">
-                            Visualizar Evolução Completa <i class="icon ion-ios-arrow-forward text-warning"></i>
-                          </p>
+                        <div class="col-md-3">
+                          <div id="rentabilidade-values">
+                            <div class="mt-2">
+                              <span class="font-weight-bold d-block">
+                                Rendimento
+                              </span>
+                              <span class="text-success">
+                                <span class="balance-hidden">****</span><span class="balance-visible">R$ 2.336,52</span>
+                              </span>
+                            </div>
+                            <div class="mt-2">
+                              <span class="font-weight-bold d-block">
+                                Rentabilidade
+                              </span>
+                              <span class="text-success">
+                                <span class="balance-hidden">****</span><span class="balance-visible">19.17%</span>
+                              </span>
+                            </div>
+                            <div class="mt-2">
+                              <span class="font-weight-bold d-block">
+                                Rentabilidade CDI
+                              </span>
+                              <span class="text-success">
+                                <span class="balance-hidden">****</span><span class="balance-visible">145.50%</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="mt-5">
+                            <p class="h6">
+                              Visualizar Evolução Completa <i class="icon ion-ios-arrow-forward text-warning"></i>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 mt-3 py-3 shadow">
-                    <div class="">
-                      <span class="rounded-badge bg-primary"><i class="icon ion-ios-stats mt-1"></i></span>
-                      <span class="h5">Rentabilidade comparada</span>
-                      <span class="d-block ml-33">Acompanhe as distribuições dos proventos gerados pelos seus
-                        investimentos</span>
-                    </div>
-
-                    <table class="table table-hover mt-3" id="rentabilidade-table">
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">No mês</th>
-                          <th scope="col">Semestre</th>
-                          <th scope="col">No ano</th>
-                          <th scope="col">12 meses</th>
-                          <th scope="col">Desde o início</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Sua carteira</th>
-                          <td>1.99%</td>
-                          <td>2.37%</td>
-                          <td>18.12%</td>
-                          <td>19.17%</td>
-                          <td>40.98%</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">CDI%</th>
-                          <td>0.74%</td>
-                          <td>2.98%</td>
-                          <td>9.67%</td>
-                          <td>13.18%</td>
-                          <td>21.04%</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">IPC-A</th>
-                          <td>0.24%</td>
-                          <td>0.59%</td>
-                          <td>3.48%</td>
-                          <td>5.06%</td>
-                          <td>7.16%</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">IBOVESPA</th>
-                          <td>0.23%</td>
-                          <td>-1.76%</td>
-                          <td>5.72%</td>
-                          <td>3.64%</td>
-                          <td>3.84%</td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="">Rentabilidade real <i class="icon ion-ios-information-circle-outline"
-                              data-toggle="tooltip" data-placement="top"
-                              title="Rentabilidade já considerando a inflação"></i></th>
-                          <td>1.74%</td>
-                          <td>1.77%</td>
-                          <td>14.15%</td>
-                          <td>13.43%</td>
-                          <td>31.56%</td>
-                        </tr>
-                      </tbody>
-                    </table>
                   </div>
                 </div>
               </div>
@@ -618,7 +564,8 @@
                                   </div>
                                   <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex font-weight-bold">
-                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                        Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="ftr-divergentChart"></div>
                                   </div>
@@ -725,7 +672,8 @@
                                   </div>
                                   <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex font-weight-bold">
-                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                        Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="jud-lineChart"></div>
                                   </div>
@@ -832,7 +780,8 @@
                                   </div>
                                   <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex font-weight-bold">
-                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                        Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="loc-lineChart"></div>
                                   </div>
@@ -939,7 +888,8 @@
                                   </div>
                                   <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex font-weight-bold">
-                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                        Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="imb-lineChart"></div>
                                   </div>
@@ -954,11 +904,21 @@
                 </div>
                 <div class="shadow mt-3">
                   <div class="row">
+                    <div class="col-12 py-3">
+                      <div class="ml-3">
+                        <span class="rounded-badge bg-primary"><i
+                            class="icon ion-ios-checkmark-circle-outline icon-badge"></i></span>
+                        <span class="h5">Proventos</span>
+                        <span class="d-block ml-33">Acompanhe as distribuições dos proventos gerados pelos seus
+                          investimentos</span>
+                      </div>
+                    </div>
                     <div class="col-12">
                       <div class="accordion" id="proventos-accordion">
                         <div class="card">
-                          <div class="card-header collapsed cursor" data-toggle="collapse" data-target="#collapseProventos"
-                            aria-expanded="true" aria-controls="collapseProventos" id="headingProventos">
+                          <div class="card-header collapsed cursor" data-toggle="collapse"
+                            data-target="#collapseProventos" aria-expanded="true" aria-controls="collapseProventos"
+                            id="headingProventos">
                             <div class="d-flex justify-content-between align-items-center">
                               <div class="w-75">
                                 <span class="font-weight-bold font-card fs-r ml-63">Proventos</span>
@@ -989,8 +949,8 @@
                                   </tr>
                                 </thead>
                                 <tbody class="text-center">
-                                  <tr class="cursor" data-toggle="collapse" href="#token-ftr" role="button"
-                                    aria-expanded="false" aria-controls="token-ftr">
+                                  <tr class="cursor" data-toggle="collapse" href="#token-proventos" role="button"
+                                    aria-expanded="false" aria-controls="token-proventos">
                                     <td><img class="symbol" src="assets/img/icon/ftr.png" alt="symbol"><span
                                         class="theme-color">FTR</span></td>
                                     <td><span class="balance-hidden">****</span><span
@@ -1004,7 +964,7 @@
                                   </tr>
                                 </tbody>
                               </table>
-                              <div class="collapse border-top" id="token-ftr">
+                              <div class="collapse border-top" id="token-proventos">
                                 <div class="row justify-content-center mb-4">
                                   <div class="col-10 mb-3">
                                     <div>
@@ -1054,7 +1014,8 @@
                                   </div>
                                   <div class="col-12 col-lg-6 mt-4 mx-0">
                                     <div class="my-3 border-bottom d-flex font-weight-bold">
-                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                      <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                        Ativo</span>
                                     </div>
                                     <div class="lineChartdiv" id="loc-lineChart"></div>
                                   </div>
@@ -1164,7 +1125,8 @@
                                 </div>
                                 <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                      Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="ftr-wallet-lineChart"></div>
                                 </div>
@@ -1244,7 +1206,8 @@
                                 </div>
                                 <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                      Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="jud-wallet-lineChart"></div>
                                 </div>
@@ -1324,7 +1287,8 @@
                                 </div>
                                 <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                      Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="imb-wallet-lineChart"></div>
                                 </div>
@@ -1405,7 +1369,8 @@
                                 </div>
                                 <div class="col-12 col-lg-6 mt-4 mx-0">
                                   <div class="my-3 border-bottom d-flex font-weight-bold">
-                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do Ativo</span>
+                                    <span class="ml-2 mb-2"><i class="icon ion-ios-trending-up mr-1"></i>Evolução do
+                                      Ativo</span>
                                   </div>
                                   <div class="lineChartdiv" id="loc-wallet-lineChart"></div>
                                 </div>
@@ -1413,12 +1378,76 @@
                             </div>
                           </div>
                         </div>
-
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col-12 mt-3 py-3 shadow">
+              <div class="">
+                <span class="rounded-badge bg-primary"><i class="icon ion-ios-stats mt-1"></i></span>
+                <span class="h5">Rentabilidade comparada</span>
+                <span class="d-block ml-33">Confira a performance da sua carteira quando comparada a outros
+                  indicadores</span>
+              </div>
+
+              <table class="table table-hover mt-3" id="rentabilidade-table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">No mês</th>
+                    <th scope="col">Semestre</th>
+                    <th scope="col">No ano</th>
+                    <th scope="col">12 meses</th>
+                    <th scope="col">Desde o início</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Sua carteira</th>
+                    <td>1.99%</td>
+                    <td>2.37%</td>
+                    <td>18.12%</td>
+                    <td>19.17%</td>
+                    <td>40.98%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CDI%</th>
+                    <td>0.74%</td>
+                    <td>2.98%</td>
+                    <td>9.67%</td>
+                    <td>13.18%</td>
+                    <td>21.04%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IPC-A</th>
+                    <td>0.24%</td>
+                    <td>0.59%</td>
+                    <td>3.48%</td>
+                    <td>5.06%</td>
+                    <td>7.16%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IBOVESPA</th>
+                    <td>0.23%</td>
+                    <td>-1.76%</td>
+                    <td>5.72%</td>
+                    <td>3.64%</td>
+                    <td>3.84%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="">Rentabilidade real <i class="icon ion-ios-information-circle-outline"
+                        data-toggle="tooltip" data-placement="top" title="Rentabilidade já considerando a inflação"></i>
+                    </th>
+                    <td>1.74%</td>
+                    <td>1.77%</td>
+                    <td>14.15%</td>
+                    <td>13.43%</td>
+                    <td>31.56%</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

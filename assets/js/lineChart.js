@@ -635,7 +635,6 @@ const handleLineChart = (id, data) => {
     }); // end am4core.ready()
 }
 
-handleLineChart("ftr-lineChart", dados);
 handleLineChart("jud-lineChart", dados);
 handleLineChart("imb-lineChart", dados);
 handleLineChart("loc-lineChart", dados);

@@ -59,5 +59,3 @@ const handlePieChart = (id, data) => {
 }
 
 handlePieChart("dashboard-chart", dadosPie);
-handlePieChart("total-invested-chart", dadosPie);
-handlePieChart("wallet-chart", dadosPie);
